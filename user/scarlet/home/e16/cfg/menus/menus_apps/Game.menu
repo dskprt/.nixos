@@ -1,0 +1,3 @@
+"Game"
+"Lutris" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/lutris.png" exec "lutris"
+"Prism Launcher" "/home/default/.nix-profile/share/icons/hicolor/scalable/apps/org.prismlauncher.PrismLauncher.svg" exec "prismlauncher"

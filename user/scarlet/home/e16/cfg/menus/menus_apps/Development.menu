@@ -1,0 +1,5 @@
+"Development"
+"CLion Nova 2024.1 EAP" "/@/data/programs/JetBrains/Toolbox/apps/clion-nova/bin/clion.svg" exec ""/@/data/programs/JetBrains/Toolbox/apps/clion-nova/bin/clion.sh""
+"CLion" "/home/default/.nix-profile/share/pixmaps/clion.png" exec "clion"
+"IntelliJ IDEA Community Edition 2023.3.3" "/@/data/programs/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.svg" exec ""/@/data/programs/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea.sh""
+"Kompare" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/kompare.png" exec "kompare"

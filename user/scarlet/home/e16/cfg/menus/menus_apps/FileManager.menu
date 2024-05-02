@@ -1,0 +1,2 @@
+"FileManager"
+"Krusader" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/krusader_user.png" exec "krusader -qwindowtitle"

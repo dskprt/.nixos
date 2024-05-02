@@ -1,0 +1,6 @@
+"Graphics"
+"Flameshot" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/org.flameshot.Flameshot.png" exec "/nix/store/4ab95v62ppsxfdwfbv3gnx9jqnaqfldn-flameshot-12.1.0/bin/flameshot"
+"gThumb" "/home/default/.nix-profile/share/icons/hicolor/16x16/apps/org.gnome.gThumb.png" exec "gthumb"
+"Krita" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/krita.png" exec "krita"
+"Prusa GCode viewer" "/home/default/.nix-profile/share/pixmaps/PrusaSlicer-gcodeviewer.png" exec "prusa-slicer --gcodeviewer"
+"PrusaSlicer" "/home/default/.nix-profile/share/pixmaps/PrusaSlicer.png" exec "prusa-slicer"

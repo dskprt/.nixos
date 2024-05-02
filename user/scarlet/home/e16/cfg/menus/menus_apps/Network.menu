@@ -1,0 +1,4 @@
+"Network"
+"Steam" "/run/current-system/sw/share/pixmaps/steam.png" exec "steam"
+"Vesktop" "/home/default/.nix-profile/share/icons/hicolor/32x32/apps/vesktop.png" exec "vesktop"
+"Vivaldi" "/run/current-system/sw/share/icons/hicolor/48x48/apps/vivaldi.png" exec "/nix/store/l7mvz9lwbj0zs32wpdg87i1xq7ji9hf6-vivaldi-6.5.3206.63/bin/vivaldi"

@@ -1,0 +1,4 @@
+""
+"Logout" NULL "exit logout"
+"Reboot" NULL exec "systemctl reboot"
+"Poweroff" NULL exec "systemctl poweroff"

@@ -1,0 +1,11 @@
+diff '--color=auto' -urpN b/kernel/power/suspend.c a/kernel/power/suspend.c
+--- b/kernel/power/suspend.c	2024-05-02 17:38:51.439826097 +0200
++++ a/kernel/power/suspend.c	2024-05-02 17:41:31.984713361 +0200
+@@ -51,6 +51,7 @@ static const char * const mem_sleep_labe
+ const char *mem_sleep_states[PM_SUSPEND_MAX];
+ 
+ suspend_state_t mem_sleep_current = PM_SUSPEND_TO_IDLE;
++EXPORT_SYMBOL_GPL(mem_sleep_current);
+ suspend_state_t mem_sleep_default = PM_SUSPEND_MAX;
+ suspend_state_t pm_suspend_target_state;
+ EXPORT_SYMBOL_GPL(pm_suspend_target_state);

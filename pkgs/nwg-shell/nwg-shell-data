@@ -1,0 +1,5 @@
+{
+	"installed-version": "nixos-custom",
+	"updates": [ "nixos-custom" ],
+	"interface-locale": "en"
+}

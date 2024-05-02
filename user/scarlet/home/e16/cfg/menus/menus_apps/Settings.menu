@@ -1,0 +1,5 @@
+"Settings"
+"Customise Look and Feel" "/home/default/.nix-profile/share/icons/gnome/48x48/apps/preferences-desktop-theme.png" exec "lxappearance"
+"Panel Manager" "/home/default/.nix-profile/share/icons/hicolor/scalable/apps/tint2conf.svg" exec "tint2conf"
+"Qt6 Settings" "/home/default/.nix-profile/share/icons/gnome/48x48/apps/preferences-desktop-theme.png" exec "qt6ct"
+"ROG Control Center" "rog-control-center" exec "rog-control-center"

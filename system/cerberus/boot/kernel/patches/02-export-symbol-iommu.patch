@@ -1,0 +1,11 @@
+diff '--color=auto' -urpN b/drivers/iommu/dma-iommu.c a/drivers/iommu/dma-iommu.c
+--- b/drivers/iommu/dma-iommu.c	2024-05-02 17:38:53.280862093 +0200
++++ a/drivers/iommu/dma-iommu.c	2024-05-02 17:40:59.123160543 +0200
+@@ -316,6 +316,7 @@ int iommu_get_dma_cookie(struct iommu_do
+ 	mutex_init(&domain->iova_cookie->mutex);
+ 	return 0;
+ }
++EXPORT_SYMBOL(iommu_get_dma_cookie);
+ 
+ /**
+  * iommu_get_msi_cookie - Acquire just MSI remapping resources

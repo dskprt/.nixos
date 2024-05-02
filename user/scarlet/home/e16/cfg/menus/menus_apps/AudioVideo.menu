@@ -1,0 +1,4 @@
+"AudioVideo"
+"Audacious" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/audacious.png" exec "audacious"
+"Easy Effects" "/home/default/.nix-profile/share/icons/hicolor/scalable/apps/com.github.wwmm.easyeffects.svg" exec "easyeffects"
+"VLC media player" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/vlc.png" exec "/nix/store/vin5hds7jv9qbvm12wy9mk61agsggmnq-vlc-3.0.20/bin/vlc --started-from-file"

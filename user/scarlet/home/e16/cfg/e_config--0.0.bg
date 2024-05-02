@@ -1,0 +1,163 @@
+5 999
+100 NONE
+1000
+5 999
+100 K5-FVWM_Background
+560 100 70 40
+565 /home/default/.e16/themes/K5-FVWM/artwork/background/bg.png
+566 1 1 0 0 0 0
+567 /home/default/.e16/themes/K5-FVWM/artwork/background/cyrus.png
+568 1 512 512 0 0
+564 1
+564 2
+564 3
+564 4
+564 5
+564 6
+564 7
+564 8
+564 9
+564 10
+564 11
+564 12
+564 13
+564 14
+564 15
+564 16
+564 17
+564 18
+564 19
+564 20
+564 21
+564 22
+564 23
+564 24
+564 25
+564 26
+564 27
+564 28
+564 29
+564 30
+564 31
+1000
+5 999
+100 eMac_Official
+560 50 70 100
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/eMac_Official_BG.jpg
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 eMac_Boot
+560 50 70 100
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/eMacBoot.jpg
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 eMac_Cyan
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_cyan.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 eMac_Blueberry
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_blue.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 eMac_Grape
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_purple.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 eMac_Strawberry
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_red.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 eMac_Tangerine
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_orange.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 eMac_Lime
+565 /home/default/.e16/themes/eMac/artwork/backgrounds/bg_green.jpg
+566 1 1 0 0 0 0
+1000
+5 999
+100 SuedE_Background
+560 40 40 50
+565 /home/default/.e16/themes/SuedE/artwork/backgrounds/bg.png
+566 1 1 512 512 0 0
+567 /home/default/.e16/themes/SuedE/artwork/backgrounds/logo.png
+568 1 512 512 0 0
+1000
+5 999
+100 Dufrenite_Radial_Logo
+560 100 70 40
+565 /home/default/.e16/themes/Dufrenite/artwork/backgrounds/bg.png
+566 0 0 0 0 1024 1024
+567 /home/default/.e16/themes/Dufrenite/artwork/backgrounds/dufrenite.png
+568 1 512 512 0 0
+1000
+5 999
+100 DreamWorks_SeaNight
+565 /home/default/.e16/themes/DreamWorks/artwork/backgrounds/seanight_1280.png
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 Black_E_AlienSand_ELogo
+560 40 40 50
+565 /home/default/.e16/themes/Black_E/artwork/backgrounds/alien_sand.png
+566 1 1 0 0 0 0
+567 /home/default/.e16/themes/Black_E/artwork/backgrounds/elogo.png
+568 1 512 512 0 0
+1000
+5 999
+100 Black_E_BornToRunUnix
+560 40 40 50
+565 /home/default/.e16/themes/Black_E/artwork/backgrounds/dark_rock.jpg
+566 1 1 0 0 0 0
+567 /home/default/.e16/themes/Black_E/artwork/backgrounds/born2run_unix.png
+568 1 512 512 0 0
+1000
+5 999
+100 Axios_CarbonDesign
+560 177 177 177
+565 /home/default/.e16/themes/Axios/artwork/backgrounds/carbon_simple.jpg
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 .rEUE001000003rMWB6
+565 /home/default/.e16/backgrounds/dragon.png
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 .jEUE00100000RqMWB6
+565 /home/default/.e16/backgrounds/remilia1.png
+566 0 1 512 512 1024 0
+1000
+5 999
+100 .bEUE00100000zqMWB6
+565 /home/default/.e16/backgrounds/remilia4.png
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 .eEUE00100000JqMWB6
+565 /home/default/.e16/backgrounds/remilia5.png
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 .JGWE001000005yRWB6
+565 /home/default/.e16/backgrounds/anime-anime-girls-Touhou-Moon-petals-kimono-1971925-wallhere.com.jpg
+566 0 0 0 0 1024 1024
+564 0
+1000
+5 999
+100 .uGWE00100000WxRWB6
+565 /home/default/.e16/backgrounds/b14de31bf74c0d1a346ec99d9b8937ec51cb94c7_s2_n1_y1.png
+566 0 0 0 0 1024 1024
+1000
+5 999
+100 .5HWE00100000byRWB6
+565 /home/default/.e16/backgrounds/hatsune-miku-facing-a-dragon-27249-1920x1200.jpg
+566 0 0 0 0 1024 1024
+1000

@@ -1,0 +1,2 @@
+"Audio"
+"Spotify" "/home/default/.nix-profile/share/icons/hicolor/48x48/apps/spotify-client.png" exec "spotify"
