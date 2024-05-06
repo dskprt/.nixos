@@ -1,6 +1,7 @@
 { lib, pkgs, ... }: {
 	imports = [
 		./persistence.nix
+		./luks.nix
 	];
 
 	fileSystems."/" = {

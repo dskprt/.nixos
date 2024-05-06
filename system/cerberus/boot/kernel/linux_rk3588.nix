@@ -1,3 +1,4 @@
+# TODO we will most likely be able to switch to the upstream kernel when 6.10 releases
 { inputs, fetchurl, linuxManualConfig, ... }:
 let
 	crossPkgs = inputs.nixpkgs.legacyPackages.x86_64-linux.pkgsCross.aarch64-multiplatform;

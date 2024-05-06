@@ -4,7 +4,7 @@
 
 		# submodules
 		./users
-		../cerberus/boot
+		./boot
 		./software
 	];
 
@@ -69,9 +69,6 @@
 		keyMap = "pl";
 		earlySetup = true;
 	};
-
-	## bluetooth
-	hardware.bluetooth.enable = true;
 
 	## firewall
 	# networking.firewall.allowedTCPPorts = [ ... ];

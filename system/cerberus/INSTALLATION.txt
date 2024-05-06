@@ -1,0 +1,38 @@
+0. Boot SD card helper image (sariel)
+1. Log in via SSH
+2. Format eMMC with GPT scheme
+3. Create partitions:
+- 500M-1G /boot/firmware (EFI System Partition)
+- remaining / (Linux LVM)
+4. Format partitions:
+- mkfs.fat -F 32 -n firmware /dev/xxx1
+- cryptsetup luksFormat /dev/xxx2
+5. Change LUKS partition label (!! IMPORTANT)
+- cryptsetup config /dev/xxx2 --label luks_primary
+6. Open and format primary partition
+- cryptsetup luksOpen /dev/disk/by-label/luks_primary primary
+- mkfs.btrfs --csum xxhash -L primary /dev/mapper/primary
+7. Set up subvolumes
+- mount /dev/mapper/primary /mnt
+- btrfs su cr /mnt/persist
+- btrfs su cr /mnt/home
+- btrfs su cr /mnt/nix
+- umount /mnt
+8. Mount partitions
+mount -t tmpfs tmpfs /mnt
+mkdir -p /mnt/{boot/firmware,nix,home,@}
+mount /dev/mapper/primary /mnt/@ -o subvol=persist,compress=zstd:2,space_cache=v2,discard=async,commit=60,noatime,nodiratime,ssd
+mount /dev/mapper/primary /mnt/home -o subvol=home,compress=zstd:2,space_cache=v2,discard=async,commit=60,noatime,nodiratime,ssd
+mount /dev/mapper/primary /mnt/nix -o subvol=nix,compress=zstd:2,space_cache=v2,discard=async,commit=60,noatime,nodiratime,ssd
+mount /dev/disk/by-label/firmware /mnt/boot/firmware
+9. Proceed with installation
+- nixos-generate-config --show-hardware-config --no-filesystems --root /mnt # not sure if the hw config is needed, inspect it
+- ...
+
+OR
+
+0. Boot SD card helper image (sariel)
+1. Make sure you can log in via SSH as root
+2. On host machine run:
+- nix run github:nix-community/nixos-anywhere -- --flake /etc/nixos#cerberus root@<ip address>
+3. Make yourself a cup of coffee and pray that everything works

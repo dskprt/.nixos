@@ -24,6 +24,10 @@
 		# Stylix
 		#stylix.url = "github:danth/stylix";
 
+		# Disko
+		disko.url = "github:nix-community/disko";
+		disko.inputs.nixpkgs.follows = "nixpkgs";
+
 		# cerberus-specific stuff
 		linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
 		rkbin = { url = "github:armbian/rkbin"; flake = false; };
@@ -53,6 +57,7 @@
 			"moon" = nixpkgs.lib.nixosSystem {
 				specialArgs = { inherit inputs; };
 				modules = [
+					inputs.disko.nixosModules.disko
 					./system/moon
 
 					{
@@ -65,6 +70,7 @@
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
 				modules = [
+					inputs.disko.nixosModules.disko
 					./system/cerberus
 
 					{
@@ -85,12 +91,13 @@
 					}
 				];
 			};
-			"sariel" = nixpkgs.lib.nixosSystem {
+			"sariel-aarch64" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
 				modules = [
+					inputs.disko.nixosModules.disko
 					./system/sdimage.nix
-					./system/sariel
+					./system/sariel-aarch64
 
 					{
 						# necessary for firmware
@@ -107,6 +114,16 @@
 					}
 				];
 			};
+			# "sariel-x86_64" = nixpkgs.lib.nixosSystem {
+			# 	specialArgs = { inherit inputs; };
+			# 	modules = [
+			# 		./system/sariel-x86_64
+
+			# 		{
+			# 			networking.hostName = "sariel";
+			# 		}
+			# 	];
+			# };
 		};
 
 		homeConfigurations = {
