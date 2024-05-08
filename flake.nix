@@ -54,6 +54,10 @@
 			localSystem = "aarch64-linux";
 			crossSystem = "aarch64-linux";
 		};
+
+		pkgs = import nixpkgs {
+			config = { allowUnfree = true; };
+		};
 	in {
 		nixosConfigurations = {
 			"moon" = nixpkgs.lib.nixosSystem {
@@ -70,15 +74,7 @@
 			};
 			"cerberus" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
-				specialArgs = {
-					inherit inputs;
-					inherit aarch64_pkgs_cross;
-
-					pkgs = import nixpkgs {
-						system = "aarch64-linux";
-						config = { allowUnfree = true; };
-					};
-				};
+				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
 				modules = [
 					inputs.disko.nixosModules.disko
 					./system/cerberus
