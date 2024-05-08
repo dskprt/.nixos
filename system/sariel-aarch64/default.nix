@@ -6,6 +6,7 @@
 		./users
 		../cerberus/boot
 		./software
+		../cerberus/hardware/ap6275p.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;
@@ -14,19 +15,10 @@
 		registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 		nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
-		gc = {
-			automatic = true;
-			dates = "daily";
-			options = "--delete-older-than 7d";
-		};
-
 		settings = {
 			experimental-features = "nix-command flakes";
 			auto-optimise-store = true;
 		};
-
-		optimise.automatic = true;
-		channel.enable = false;
 	};
  
 	powerManagement = {
@@ -53,7 +45,8 @@
 	services.fstrim.enable = true;
 
 	## networking
-	networking.networkmanager.enable = true;
+	networking.wireless.enable = lib.mkForce false;
+	networking.networkmanager.enable = lib.mkForce true;
 
 	## time
 	time.timeZone = "Europe/Warsaw";

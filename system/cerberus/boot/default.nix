@@ -1,23 +1,26 @@
 { inputs, pkgs, lib, aarch64_pkgs_cross, ... }:
 let
-	crossPkgs = inputs.nixpkgs.legacyPackages.x86_64-linux.pkgsCross.aarch64-multiplatform;
+	uboot = aarch64_pkgs_cross.callPackage ./uboot/upstream.nix {
+		inherit inputs;
+		inherit pkgs;
+		inherit aarch64_pkgs_cross;
+	};
 in
 {
 	boot.kernelPackages = aarch64_pkgs_cross.recurseIntoAttrs (aarch64_pkgs_cross.linuxPackagesFor
-		(aarch64_pkgs_cross.callPackage ./kernel/linux_rk3588.nix { inherit inputs; }));
+		(aarch64_pkgs_cross.callPackage ./kernel/linux_rk3588.nix {
+			inherit inputs;
+			inherit aarch64_pkgs_cross;
+		}));
 	
 	boot.kernelParams = [
-		"earlycon"
 		"console=tty1"
 		"console=ttyS2,1500000"
 
 		"systemd.show_status=auto"
 		"sysrq_always_enabled=1"
-
-		"coherent_pool=2M"
-		"irqchip.gicv3_pseudo_nmi=0"
 	];
-	boot.consoleLogLevel = 9;
+	boot.consoleLogLevel = 7;
 
 	boot.supportedFilesystems = lib.mkForce [
 		"vfat"
@@ -38,15 +41,10 @@ in
 	boot.loader = {
 		grub.enable = lib.mkForce false;
 		generic-extlinux-compatible.enable = true;
-		# systemd-boot = {
-		# 	enable = true;
-		# 	consoleMode = "auto";
-		# 	configurationLimit = 10;
-		# };
 	};
 
 	environment.systemPackages = with aarch64_pkgs_cross; [
-		ubootOrangePi5
+		uboot
 		rkbin
 	];
 

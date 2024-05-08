@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "armbian-firmware": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714990263,
+        "narHash": "sha256-4BgczfKQ+dZh/CbGyLAmpk+WXfs9Jt+SBrZel1CKz28=",
+        "owner": "armbian",
+        "repo": "firmware",
+        "rev": "3bb76262e4d3228719083b10e17ee52ffaf71776",
+        "type": "github"
+      },
+      "original": {
+        "owner": "armbian",
+        "repo": "firmware",
+        "type": "github"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -263,6 +279,7 @@
     },
     "root": {
       "inputs": {
+        "armbian-firmware": "armbian-firmware",
         "disko": "disko",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
@@ -270,6 +287,7 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
         "rkbin": "rkbin",
+        "uboot": "uboot",
         "wired": "wired"
       }
     },
@@ -319,6 +337,23 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "uboot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715025257,
+        "narHash": "sha256-1JUYBv/zJ22M3XuTrWXv23RvHHWTjxomD8ukZVVDPNE=",
+        "owner": "u-boot",
+        "repo": "u-boot",
+        "rev": "52835266d3e933656a217233eaf672dd9ccd7352",
+        "type": "github"
+      },
+      "original": {
+        "owner": "u-boot",
+        "ref": "v2024.07-rc2",
+        "repo": "u-boot",
         "type": "github"
       }
     },

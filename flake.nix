@@ -31,7 +31,8 @@
 		# cerberus-specific stuff
 		linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
 		rkbin = { url = "github:armbian/rkbin"; flake = false; };
-		#mirror-libmali = { url = "github:JeffyCN/mirrors/libmali"; flake = false; };
+		uboot = { url = "github:u-boot/u-boot/v2024.07-rc2"; flake = false; };
+		armbian-firmware = { url = "github:armbian/firmware"; flake = false; };
 	};
 
 	outputs = {
@@ -41,7 +42,8 @@
 		wired,
 		linux-rockchip,
 		rkbin,
-		#mirror-libmali,
+		uboot,
+		armbian-firmware,
 		...
 	}@inputs: let
 		x86_64_pkgs_native = import nixpkgs {
@@ -49,7 +51,7 @@
 		};
 
 		aarch64_pkgs_cross = import nixpkgs {
-			localSystem = "x86_64-linux";
+			localSystem = "aarch64-linux";
 			crossSystem = "aarch64-linux";
 		};
 	in {
@@ -72,6 +74,7 @@
 				modules = [
 					inputs.disko.nixosModules.disko
 					./system/cerberus
+					./system/cerberus/boot/kernel/build.nix
 
 					{
 						#nixpkgs.crossSystem.system = "aarch64-linux";

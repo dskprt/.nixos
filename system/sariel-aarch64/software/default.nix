@@ -10,10 +10,7 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-		home-manager
-		cachix
-
-		gitFull
+		git
 		micro
 		tmux
 
@@ -21,8 +18,17 @@
 
 		rsync
 		curl
+		binutils
+		inetutils
+		usbutils
+		pciutils
+		util-linux
 
 		xfsprogs
+		e2fsprogs
+		cryptsetup
+
+		ubootTools
 	];
 
 	environment.variables = {

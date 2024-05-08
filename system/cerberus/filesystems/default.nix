@@ -16,7 +16,7 @@
 		options = [ "noatime" "nodiratime" "size=10G" ];
 	};
 
-	fileSystems."/boot" = {
+	fileSystems."/boot/firmware" = {
 		device = "/dev/disk/by-label/firmware";
 		fsType = "vfat";
 	};

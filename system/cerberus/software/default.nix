@@ -60,6 +60,8 @@
 
 		xfsprogs
 
+		ubootTools
+
 		# vivaldi
 		# vivaldi-ffmpeg-codecs
 

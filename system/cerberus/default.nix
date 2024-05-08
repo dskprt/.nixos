@@ -11,7 +11,8 @@
 		./users
 		./boot
 		./software
-		./gpu/g610.nix
+		./hardware/g610.nix
+		./hardware/ap6275p.nix
 
 		# hardware config
 		#./hardware.nix
@@ -65,6 +66,9 @@
 
 	## networking
 	networking.networkmanager.enable = true;
+	# the kernel(?) presents with a wlan1 device which seems to be the SOC built-in rkwifi
+	# chip that always is disconnected and has NO-CARRIER, so disable it
+	systemd.network.netdevs.wlan1.enable = false;
 
 	## time
 	time.timeZone = "Europe/Warsaw";

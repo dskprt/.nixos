@@ -1,7 +1,8 @@
 # TODO we will most likely be able to switch to the upstream kernel when 6.10 releases
-{ inputs, fetchurl, linuxManualConfig, ... }:
+{ inputs, fetchurl, linuxManualConfig, aarch64_pkgs_cross, ... }:
 let
-	crossPkgs = inputs.nixpkgs.legacyPackages.x86_64-linux.pkgsCross.aarch64-multiplatform;
+	llvmPackages = aarch64_pkgs_cross.llvmPackages_18;
+	inherit (llvmPackages) clang stdenv;
 in
 (linuxManualConfig rec {
 	version = "6.1.43";
@@ -22,9 +23,10 @@ in
 	];
 	#hardeningDisable = [ "relro" ];
 
-	configfile = ./linux_rk3588_experimental_purged.config;
+	configfile = ./new2.config;
 	allowImportFromDerivation = true;
 })
 .overrideAttrs(prev: {
-	nativeBuildInputs = prev.nativeBuildInputs ++ [ crossPkgs.ubootTools ];
+	name = "k";
+	nativeBuildInputs = prev.nativeBuildInputs ++ [ aarch64_pkgs_cross.ubootTools ];
 })

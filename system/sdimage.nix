@@ -1,27 +1,52 @@
-{ inputs, config, ... }:
+{ inputs, pkgs, aarch64_pkgs_cross, config, lib, ... }:
 let
-	pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux.pkgsCross.aarch64-multiplatform;
+	uboot = aarch64_pkgs_cross.callPackage ./cerberus/boot/uboot/upstream.nix { 
+		inherit inputs;
+		inherit pkgs;
+		inherit aarch64_pkgs_cross;
+	};
 in
 {
+	
 	imports = [
+		"${inputs.nixpkgs}/nixos/modules/profiles/installation-device.nix"
 		"${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image.nix"
 	];
+
+	fileSystems = {
+		"/boot/firmware" = {
+			device = "/dev/disk/by-label/firmware";
+			fsType = "vfat";
+		};
+		"/" = {
+			device = "/dev/disk/by-label/NIXOS_SD";
+			fsType = "ext4";
+		};
+	};
 
 	sdImage = {
 		firmwarePartitionOffset = 16;
 		firmwarePartitionName = "firmware";
-		firmwareSize = 256;
+		firmwareSize = 64;
 
 		compressImage = false;
 		expandOnBoot = true;
 
-		populateFirmwareCommands = ''
-			${config.boot.loader.generic-extlinux-compatible.populateCmd} -c ${config.system.build.toplevel} -d ./firmware
-			dd if=${pkgs.ubootOrangePi5}/u-boot-rockchip.bin of=$img seek=64 conv=notrunc
+		 populateFirmwareCommands = ''
+		 	dd if=${uboot}/u-boot-rockchip.bin of=$img seek=64 conv=notrunc
+		 '';
+
+		postBuildCommands = ''
+			mkdir -p firmware
+			cp ${uboot}/u-boot-rockchip.bin firmware/
 		'';
 
 		populateRootCommands = ''
 			mkdir -p ./files/boot
+			${config.boot.loader.generic-extlinux-compatible.populateCmd} -c ${config.system.build.toplevel} -d ./files/boot
 		'';
 	};
+
+	installer.cloneConfig = false;
+	boot.consoleLogLevel = lib.mkForce 5;
 }

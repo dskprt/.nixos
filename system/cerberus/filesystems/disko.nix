@@ -10,7 +10,7 @@
 
 				partitions = {
 					firmware = {
-						size = "1G";
+						size = "64M";
 						type = "EF00";
 						name = "firmware";
 
