@@ -15,7 +15,12 @@
 		./hardware/ap6275p.nix
 	];
 
-	nixpkgs.config.allowUnfree = true;
+	nixpkgs.config = {
+		allowUnfree = true;
+		allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+			"rkbin"
+		];
+	};
 
 	nix = {
 		registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
