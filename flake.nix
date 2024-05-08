@@ -53,6 +53,7 @@
 		aarch64_pkgs_cross = import nixpkgs {
 			localSystem = "aarch64-linux";
 			crossSystem = "aarch64-linux";
+			config = { allowUnfree = true; };
 		};
 
 		pkgs = import nixpkgs {
