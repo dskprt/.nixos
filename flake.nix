@@ -75,7 +75,7 @@
 					inherit aarch64_pkgs_cross;
 
 					pkgs = import nixpkgs {
-						inherit system;
+						system = "aarch64-linux";
 						config = { allowUnfree = true; };
 					};
 				};
