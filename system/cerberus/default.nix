@@ -11,11 +11,8 @@
 		./users
 		./boot
 		./software
-		./hardware/g610.nix
+		#./hardware/g610.nix
 		./hardware/ap6275p.nix
-
-		# hardware config
-		#./hardware.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;

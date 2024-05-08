@@ -44,7 +44,7 @@ let
 		];
 
 		preBuild = ''
-			addAutoPatchelfSearchPath ${stdenv.cc.cc.lib}/aarch64-unknown-linux-gnu/lib
+			addAutoPatchelfSearchPath ${pkgs.stdenv.cc.cc.lib}/aarch64-unknown-linux-gnu/lib
 		'';
 
 		installPhase = ''
