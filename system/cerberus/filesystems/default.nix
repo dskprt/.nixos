@@ -1,7 +1,7 @@
 { lib, pkgs, ... }: {
 	imports = [
 		./persistence.nix
-		./luks.nix
+		#./luks.nix
 	];
 
 	fileSystems."/" = {
@@ -16,9 +16,15 @@
 		options = [ "noatime" "nodiratime" "size=10G" ];
 	};
 
-	fileSystems."/boot/firmware" = {
-		device = "/dev/disk/by-label/firmware";
-		fsType = "vfat";
+	# fileSystems."/boot/firmware" = {
+	# 	device = "/dev/disk/by-label/firmware";
+	# 	fsType = "vfat";
+	# };
+
+	fileSystems."/boot" = {
+		device = "/dev/disk/by-label/emmc-primary";
+		fsType = "btrfs";
+		options = [ "subvol=boot" "compress=zstd:2" "space_cache=v2" "discard=async" "commit=60" "noatime" "nodiratime" "ssd" ];
 	};
 
 	fileSystems."/home" = {
