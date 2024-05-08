@@ -46,16 +46,16 @@
 		neededForBoot = true;
 	};
 
-	system.fsPackages = [ pkgs.bindfs ];
+	# system.fsPackages = [ pkgs.bindfs ];
 
-	fileSystems."/usr/share/fonts" = {
-		device = (pkgs.buildEnv {
-			name = "system-fonts";
-			paths = config.fonts.packages;
-			pathsToLink = [ "/share/fonts" ];
-		}) + "/share/fonts";
+	# fileSystems."/usr/share/fonts" = {
+	# 	device = (pkgs.buildEnv {
+	# 		name = "system-fonts";
+	# 		paths = config.fonts.packages;
+	# 		pathsToLink = [ "/share/fonts" ];
+	# 	}) + "/share/fonts";
 
-		fsType = "fuse.bindfs";
-		options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
-	};
+	# 	fsType = "fuse.bindfs";
+	# 	options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
+	# };
 }

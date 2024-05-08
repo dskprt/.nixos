@@ -28,6 +28,9 @@
 		e2fsprogs
 		cryptsetup
 
+		hdparm
+		sysbench
+
 		ubootTools
 	];
 
