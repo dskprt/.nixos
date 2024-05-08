@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 	imports = [
-		./desktop/gnome
+		#./desktop/gnome
 	];
 
 	services.tlp.enable = true;
