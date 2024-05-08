@@ -70,7 +70,15 @@
 			};
 			"cerberus" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
-				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
+				specialArgs = {
+					inherit inputs;
+					inherit aarch64_pkgs_cross;
+
+					pkgs = import nixpkgs {
+						inherit system;
+						config = { allowUnfree = true; };
+					};
+				};
 				modules = [
 					inputs.disko.nixosModules.disko
 					./system/cerberus
