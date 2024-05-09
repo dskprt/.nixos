@@ -38,6 +38,8 @@
 
 		gnome.dconf-editor
 		kdePackages.qt6ct
+
+		networkmanagerapplet
 	];
 
 	services.wired.enable = true;
@@ -69,6 +71,7 @@
 		(sleep 1 && bash $HOME/.e16/batmond.sh) &
 		(sleep 1 && gkrellm) &
 		(sleep 1 && tint2) &
+		(sleep 1 && nm-applet) &
 		(systemctl --user start easyeffects) &
 		(systemctl --user start polkit-gnome-authentication-agent-1) &
 		(sleep 2 && systemctl --user start wired) &
