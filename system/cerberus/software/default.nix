@@ -68,15 +68,15 @@
 		# wine64Packages.staging
 		# winetricks
 		box64
-	]
+	];
 	# ++ [
 	# 	x86_64_pkgs_cross.wine64Packages.staging
 	# 	x86_64_pkgs_cross.winetricks
 	# ];
 
-	virtualisation = {
-		waydroid.enable = true;
-	};
+	# virtualisation = {
+	# 	waydroid.enable = true;
+	# };
 
 	environment.variables = {
 		EDITOR = "micro";
