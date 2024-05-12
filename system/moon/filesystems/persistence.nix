@@ -7,6 +7,7 @@
 			"/var/log"
 			"/var/lib/libvirt"
 			"/var/lib/containers"
+			"/etc/ssh"
 		];
 		files = [
 			"/etc/machine-id"

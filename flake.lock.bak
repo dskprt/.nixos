@@ -3,11 +3,11 @@
     "armbian-firmware": {
       "flake": false,
       "locked": {
-        "lastModified": 1715505595,
-        "narHash": "sha256-unt8MeH6ePepmQM+WFQiVO0iI+bKVy4RFE6LtYGhgyA=",
+        "lastModified": 1714990263,
+        "narHash": "sha256-4BgczfKQ+dZh/CbGyLAmpk+WXfs9Jt+SBrZel1CKz28=",
         "owner": "armbian",
         "repo": "firmware",
-        "rev": "6faef0d76cff4f2f6082b6a22245341fcb4f469e",
+        "rev": "3bb76262e4d3228719083b10e17ee52ffaf71776",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1715526530,
-        "narHash": "sha256-1ot3VxxbRexDAbk70n0yLt7EEEzypAGK3ut+YV7m/Mg=",
+        "lastModified": 1714959124,
+        "narHash": "sha256-oYmauPDpSgWjY9hvzwd815igGfP8Ds5Bk6bTo5JrBRk=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "94a818d8b914e06c04c21b5f0bafbb4b96ee8b47",
+        "rev": "e1b3ae2b4ebc3c7b83154b9361e3d154e64e362d",
         "type": "github"
       },
       "original": {
@@ -113,11 +113,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1715486357,
-        "narHash": "sha256-4pRuzsHZOW5W4CsXI9uhKtiJeQSUoe1d2M9mWU98HC4=",
+        "lastModified": 1714976273,
+        "narHash": "sha256-IbYND3kbkN/GmV8pK8mglViHbdUgIJ1H48HiRPq2w3E=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "44677a1c96810a8e8c4ffaeaad10c842402647c1",
+        "rev": "2b87a11125f988a9f67ee63eeaa3682bc841d9b5",
         "type": "github"
       },
       "original": {
@@ -142,6 +142,23 @@
         "type": "github"
       }
     },
+    "linux-rockchip": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714915409,
+        "narHash": "sha256-Vrw/PMq6bABoamgm337ZvHlP3pZE+JYcC4xSua7j+xM=",
+        "owner": "armbian",
+        "repo": "linux-rockchip",
+        "rev": "cdbd7566a3a017d407c8a9a9af176c7ca46c8c69",
+        "type": "github"
+      },
+      "original": {
+        "owner": "armbian",
+        "ref": "rk-6.1-rkr1",
+        "repo": "linux-rockchip",
+        "type": "github"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -149,11 +166,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1715477250,
-        "narHash": "sha256-I/jZFo3su5HF8RCBfTgIYDD7IgFl7Z2R4vln1U6wC9o=",
+        "lastModified": 1714958461,
+        "narHash": "sha256-sEm5sNYZxhY4wrHLhX1huuR2U5JB9i+M6n5f8X2+xqE=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "9aebc4df593d61656ce8fb708ad839db2efaab31",
+        "rev": "21cb883949be1e0694133058c04ba3667fe94c95",
         "type": "github"
       },
       "original": {
@@ -198,11 +215,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1715447595,
-        "narHash": "sha256-VsVAUQOj/cS1LCOmMjAGeRksXIAdPnFIjCQ0XLkCsT0=",
+        "lastModified": 1714906307,
+        "narHash": "sha256-UlRZtrCnhPFSJlDQE7M0eyhgvuuHBTe1eJ9N9AQlJQ0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "062ca2a9370a27a35c524dc82d540e6e9824b652",
+        "rev": "25865a40d14b3f9cf19f19b924e2ab4069b09588",
         "type": "github"
       },
       "original": {
@@ -247,11 +264,11 @@
     "rkbin": {
       "flake": false,
       "locked": {
-        "lastModified": 1715069119,
-        "narHash": "sha256-r9yCGow4+dkjelDyNA800C/WDo72Q9tCYnVitMXAcDo=",
+        "lastModified": 1709918263,
+        "narHash": "sha256-VrXTpAGEJP6+lmiINGewRIAU9Y0BN7HzLQ54LbDJZnw=",
         "owner": "armbian",
         "repo": "rkbin",
-        "rev": "90b9ce9aac00a0f7702f92fafd41603bc3730c52",
+        "rev": "56b7aa242dc9a4a9108d74065d819666067d1692",
         "type": "github"
       },
       "original": {
@@ -266,6 +283,7 @@
         "disko": "disko",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
+        "linux-rockchip": "linux-rockchip",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
         "rkbin": "rkbin",

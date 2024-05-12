@@ -33,6 +33,12 @@
 		options = [ "subvol=home" "compress=zstd:2" "space_cache=v2" "discard=async" "commit=60" "noatime" "nodiratime" "ssd" ];
 	};
 
+	fileSystems."/root" = {
+		device = "/dev/disk/by-label/emmc-primary";
+		fsType = "btrfs";
+		options = [ "subvol=root" "compress=zstd:2" "space_cache=v2" "discard=async" "commit=60" "noatime" "nodiratime" "ssd" ];
+	};
+
 	fileSystems."/nix" = {
 		device = "/dev/disk/by-label/emmc-primary";
 		fsType = "btrfs";

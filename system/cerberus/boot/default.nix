@@ -7,6 +7,10 @@ let
 	};
 in
 {
+	imports = [
+		./uboot/build.nix
+	];
+	
 	boot.kernelPackages = aarch64_pkgs_cross.recurseIntoAttrs (aarch64_pkgs_cross.linuxPackagesFor
 		(aarch64_pkgs_cross.callPackage ./kernel/linux_rk3588.nix {
 			inherit inputs;

@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, aarch64_pkgs_cross, ... }: {
+{ inputs, lib, config, pkgs, aarch64_pkgs_cross, x86_64_pkgs_cross, ... }: {
 	imports = [
 		(inputs.impermanence + "/nixos.nix")
 
@@ -16,6 +16,7 @@
 	];
 
 	nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.allowUnsupportedSystem = true;
 
 	nix = {
 		registry = lib.mapAttrs (_: value: { flake = value; }) inputs;

@@ -29,7 +29,7 @@
 		disko.inputs.nixpkgs.follows = "nixpkgs";
 
 		# cerberus-specific stuff
-		linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
+		#linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
 		rkbin = { url = "github:armbian/rkbin"; flake = false; };
 		uboot = { url = "github:u-boot/u-boot/v2024.07-rc2"; flake = false; };
 		armbian-firmware = { url = "github:armbian/firmware"; flake = false; };
@@ -40,7 +40,7 @@
 		home-manager,
 		impermanence,
 		wired,
-		linux-rockchip,
+		#linux-rockchip,
 		rkbin,
 		uboot,
 		armbian-firmware,
@@ -48,17 +48,25 @@
 	}@inputs: let
 		x86_64_pkgs_native = import nixpkgs {
 			system = "x86_64-linux";
+			config = { allowUnsupportedSystem = true; };
+		};
+
+		x86_64_pkgs_cross = import nixpkgs {
+			localSystem = "x86_64-linux";
+			crossSystem = "x86_64-linux";
+			config = { allowUnsupportedSystem = true; };
 		};
 
 		aarch64_pkgs_cross = import nixpkgs {
-			localSystem = "aarch64-linux";
-			crossSystem = "aarch64-linux";
+			# localSystem = "x86_64-linux";
+			# crossSystem = "aarch64-linux";
+			system = "aarch64-linux";
 			config = { allowUnfree = true; };
 		};
 
-		pkgs = import nixpkgs {
-			config = { allowUnfree = true; };
-		};
+		# pkgs = import nixpkgs {
+		# 	config = { allowUnfree = true; };
+		# };
 	in {
 		nixosConfigurations = {
 			"moon" = nixpkgs.lib.nixosSystem {
@@ -75,7 +83,7 @@
 			};
 			"cerberus" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
-				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
+				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; inherit x86_64_pkgs_cross; };
 				modules = [
 					inputs.disko.nixosModules.disko
 					./system/cerberus
@@ -84,9 +92,6 @@
 					{
 						#nixpkgs.crossSystem.system = "aarch64-linux";
 						#nixpkgs.localSystem.system = "x86_64-linux";
-
-						# necessary for firmware
-						nixpkgs.config.allowUnfree = true;
 
 						nixpkgs.overlays = [
 							(final: super: {

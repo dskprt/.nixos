@@ -14,7 +14,8 @@ let
 		};
 
 		buildCommand = ''
-			install -Dm444 $src $out/lib/firmware/mali_csffw.bin
+			mkdir -p $out/lib/firmware
+			cp $src $out/lib/firmware/
 		'';
 	};
 
@@ -24,6 +25,7 @@ let
 
 		libfile = "libmali-valhall-g610-g13p0-x11-wayland-gbm.so";
 
+		dontUnpack = true;
 		dontConfigure = true;
 
 		src = pkgs.fetchurl {
@@ -39,8 +41,8 @@ let
 			stdenv.cc.cc.lib
 			libdrm
 			wayland
-			libxcb
-			libX11
+			xorg.libxcb
+			xorg.libX11
 		];
 
 		preBuild = ''
@@ -54,7 +56,7 @@ let
 			mkdir -p $out/etc/OpenCL/vendors
 			mkdir -p $out/share/glvnd/egl_vendor.d
 
-			install --mode=755 lib/aarch64-linux-gnu/${libfile} $out/lib
+			install --mode=755 ${src} $out/lib
 
 			echo $out/lib/${libfile} > $out/etc/OpenCL/vendors/mali.icd
 
@@ -81,16 +83,23 @@ in
 
 		opengl.package =
 			((aarch64_pkgs_cross.mesa.override {
-				galliumDrivers = [ "panthor" "swrast" ];
-				vulkanDrivers = [ "panthor" "swrast" ];
+				galliumDrivers = [ "panfrost" "swrast" ];
+				vulkanDrivers = [ "panfrost" "swrast" ];
 			}).overrideAttrs (prev: {
 				pname = "mesa";
-				version = "24.1.0-rc2";
+				version = "24.1.0-rc3";
 				src = aarch64_pkgs_cross.fetchurl {
-					url = "https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-24.0.6/mesa-mesa-24.1.0-rc2.tar.gz";
-					hash = "";
+					url = "https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-24.1.0-rc3/mesa-mesa-24.1.0-rc3.tar.gz";
+					hash = "sha256-rqmYFkrRpzKwItaaDqVTsONQrMC+mL1XaVgYnTDC4nY=";
 				};
+
+				mesonFlags = [
+					(lib.mesonEnable "gallium-vdpau" false)
+					(lib.mesonEnable "gallium-va" false)
+					(lib.mesonEnable "gallium-xa" false)
+				] ++ prev.mesonFlags;
 			})).drivers;
-			extraPackages = [ libmali-valhall-g610 ];
+		opengl.package = pkgs.mesa;
+		opengl.extraPackages = [ libmali-valhall-g610 ];
 	};
 }

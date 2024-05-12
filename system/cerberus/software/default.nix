@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, x86_64_pkgs_cross, ... }: {
 	imports = [
 		#./desktop/gnome
 	];
@@ -62,16 +62,20 @@
 
 		ubootTools
 
-		# vivaldi
-		# vivaldi-ffmpeg-codecs
+		vivaldi
+		#vivaldi-ffmpeg-codecs
 
-		# wineWowPackages.staging
+		# wine64Packages.staging
 		# winetricks
-		# box64
-	];
+		box64
+	]
+	# ++ [
+	# 	x86_64_pkgs_cross.wine64Packages.staging
+	# 	x86_64_pkgs_cross.winetricks
+	# ];
 
 	virtualisation = {
-		#waydroid.enable = true;
+		waydroid.enable = true;
 	};
 
 	environment.variables = {

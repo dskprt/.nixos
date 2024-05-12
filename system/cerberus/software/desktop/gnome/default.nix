@@ -7,16 +7,15 @@
 				pkgs.xterm
 			];
 
-			displayManager = {
-				gdm.enable = true;
-				autoLogin = {
-					enable = true;
-					user = "hades";
-				};
-			};
-			
+			displayManager.gdm.enable = true;
 			desktopManager.gnome.enable = true;
 		};
+
+		# displayManager.autoLogin = {
+		# 	enable = true;
+		# 	user = "hades";
+		# };
+
 		gnome = {
 			core-os-services.enable = true;
 			core-shell.enable = true;
@@ -26,18 +25,18 @@
 		};
 	};
 
-	services.gnome.gnome-online-miners.enable = false;
-	services.gnome.gnome-online-accounts.enable = true;
-	services.gnome.gnome-initial-setup.enable = false;
-	services.gnome.gnome-remote-desktop.enable = true;
-	services.gnome.rygel.enable = true;
-	services.gnome.sushi.enable = false;
+	services.gnome.gnome-online-miners.enable = lib.mkForce false;
+	services.gnome.gnome-online-accounts.enable = lib.mkForce true;
+	services.gnome.gnome-initial-setup.enable = lib.mkForce false;
+	services.gnome.gnome-remote-desktop.enable = lib.mkForce true;
+	services.gnome.rygel.enable = lib.mkForce true;
+	services.gnome.sushi.enable = lib.mkForce false;
 
-	services.packagekit.enable = false;
+	services.packagekit.enable = lib.mkForce false;
 	services.power-profiles-daemon.enable = lib.mkForce false;
 
-	programs.gnome-terminal.enable = false;
-	programs.geary.enable = true;
+	programs.gnome-terminal.enable = lib.mkForce false;
+	programs.geary.enable = lib.mkForce true;
 
 	environment.gnome.excludePackages = (with pkgs; [
 		gnome-tour
@@ -71,13 +70,13 @@
 		konsole # terminal
 		gthumb # image viewer
 
-		nightfox-gtk-theme
-		fluent-gtk-theme
-		paper-icon-theme
+		# nightfox-gtk-theme
+		# fluent-gtk-theme
+		# paper-icon-theme
 
-		rose-pine-cursor
+		# rose-pine-cursor
 
-		gnomeExtensions.forge
+		#gnomeExtensions.forge
 	];
 
 	xdg.mime.defaultApplications = {
@@ -96,15 +95,15 @@
 		show-desktop-icons=true
 	'';
 
-	dconf.settings = {
-		"org/gnome/shell" = {
-			disabled-user-extensions = false;
+	# dconf.settings = {
+	# 	"org/gnome/shell" = {
+	# 		disabled-user-extensions = false;
 
-			enabled-extensions = [
-				"forge@jmmaranan.com"
-			];
-		};
+	# 		enabled-extensions = [
+	# 			"forge@jmmaranan.com"
+	# 		];
+	# 	};
 
-		"org/gnome/desktop/interface".color-scheme = "prefer-dark";
-	};
+	# 	"org/gnome/desktop/interface".color-scheme = "prefer-dark";
+	# };
 }
