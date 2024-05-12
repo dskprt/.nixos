@@ -11,7 +11,7 @@ in
 	
 	src = fetchurl {
 		url = "https://github.com/armbian/linux-rockchip/archive/3611c0f68000a5f53612dcc4858e3b5369eab35f.tar.gz";
-		hash = "";
+		hash = "sha256-OfslKneJqGkRPs06YRZI/KO8Py/LIedjt8l3/58g0JE=";
 	};
 
 	kernelPatches = [
