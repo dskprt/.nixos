@@ -62,7 +62,7 @@
 
 		ubootTools
 
-		vivaldi
+		#vivaldi
 		#vivaldi-ffmpeg-codecs
 
 		# wine64Packages.staging
