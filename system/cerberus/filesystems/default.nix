@@ -22,9 +22,9 @@
 	# };
 
 	fileSystems."/boot" = {
-		device = "/dev/disk/by-label/emmc-primary";
-		fsType = "btrfs";
-		options = [ "subvol=boot" "compress=zstd:2" "space_cache=v2" "discard=async" "commit=60" "noatime" "nodiratime" "ssd" ];
+		device = "/dev/disk/by-label/firmware";
+		fsType = "vfat";
+		options = [ "defaults" ];
 	};
 
 	fileSystems."/home" = {
