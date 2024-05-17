@@ -1,8 +1,4 @@
 { pkgs, lib, ... }: {
-	imports = [
-		./greetd.nix
-	];
-
 	services = {
 		xserver = {
 			enable = true;
@@ -23,16 +19,17 @@
 	};
 
 	services.gnome.gnome-online-miners.enable = lib.mkForce false;
-	services.packagekit.enable = lib.mkForce false;
+	services.gnome.gnome-online-accounts.enable = lib.mkForce true;
 	services.gnome.gnome-initial-setup.enable = lib.mkForce false;
-	#services.gnome.gnome-remote-desktop.enable = lib.mkForce false;
-	#services.gnome.rygel.enable = lib.mkForce false;
+	services.gnome.gnome-remote-desktop.enable = lib.mkForce true;
+	services.gnome.rygel.enable = lib.mkForce true;
 	services.gnome.sushi.enable = lib.mkForce false;
 
-	services.power-profiles-daemon.enable = lib.mkForce false;
+	services.packagekit.enable = lib.mkForce false;
+	services.power-profiles-daemon.enable = lib.mkForce true;
 
 	programs.gnome-terminal.enable = lib.mkForce true;
-	#programs.geary.enable = lib.mkForce false;
+	programs.geary.enable = lib.mkForce true;
 
 	environment.gnome.excludePackages = (with pkgs; [
 		gnome-tour
@@ -40,15 +37,17 @@
 		orca
 		gnome-console
 		gnome-photos
+		loupe
+		simple-scan
 	]) ++ (with pkgs.gnome; [
-		#yelp
+		yelp
 		cheese
 		epiphany
 		gnome-contacts
 		gnome-logs
-		#gnome-maps
-		#gnome-music
-		#nautilus
+		gnome-maps
+		gnome-music
+		nautilus
 		totem
 	]);
 
@@ -58,9 +57,20 @@
 		gnome.dconf-editor
 
 		cinnamon.nemo-with-extensions
-		#cinnamon.nemo-fileroller
+		# cinnamon.nemo-fileroller
 
 		gnome.adwaita-icon-theme
+
+		konsole # terminal
+		gthumb # image viewer
+
+		# nightfox-gtk-theme
+		# fluent-gtk-theme
+		# paper-icon-theme
+
+		# rose-pine-cursor
+
+		#gnomeExtensions.forge
 	];
 
 	xdg.mime.defaultApplications = {
@@ -68,14 +78,15 @@
 		"application/x-gnome-saved-search" = "nemo.desktop";
 	};
 
+	xdg.portal.enable = true;
 	xdg.portal.xdgOpenUsePortal = true;
 
 	# experiment: nemo as desktop icon manager
-	#services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
-	#	[org.gnome.desktop.background]
-	#	show-desktop-icons=false
-	#	[org.nemo.desktop]
-	#	show-desktop-icons=true
-	#'';
+	services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+		[org.gnome.desktop.background]
+		show-desktop-icons=false
+		[org.nemo.desktop]
+		show-desktop-icons=true
+	'';
 }
 

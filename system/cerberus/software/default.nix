@@ -1,6 +1,6 @@
 { pkgs, x86_64_pkgs_cross, ... }: {
 	imports = [
-		#./desktop/gnome
+		./desktop/gnome
 	];
 
 	services.tlp.enable = true;
@@ -34,7 +34,7 @@
 		home-manager
 		cachix
 
-		gitFull
+		git
 		micro
 		tmux
 		

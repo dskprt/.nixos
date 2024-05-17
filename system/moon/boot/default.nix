@@ -1,6 +1,6 @@
 { pkgs, lib, ... }: {
 	imports = [
-		./plymouth.nix
+		#./plymouth.nix
 	];
 
 	boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;

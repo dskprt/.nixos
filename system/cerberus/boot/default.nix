@@ -23,6 +23,8 @@ in
 
 		"systemd.show_status=auto"
 		"sysrq_always_enabled=1"
+
+		"systemd.setenv=SYSTEMD_SULOGIN_FORCE=1"
 	];
 	boot.consoleLogLevel = 7;
 

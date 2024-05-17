@@ -87,10 +87,10 @@ in
 				vulkanDrivers = [ "panfrost" "swrast" ];
 			}).overrideAttrs (prev: {
 				pname = "mesa";
-				version = "24.1.0-rc3";
+				version = "24.0.7";
 				src = aarch64_pkgs_cross.fetchurl {
-					url = "https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-24.1.0-rc3/mesa-mesa-24.1.0-rc3.tar.gz";
-					hash = "sha256-rqmYFkrRpzKwItaaDqVTsONQrMC+mL1XaVgYnTDC4nY=";
+					url = "https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-24.0.7/mesa-mesa-24.0.7.tar.gz";
+					hash = "sha256-VghAuGraq9Wmdbq04GsjTY/m6jWQ4s+M98yg2K2e/3o=";
 				};
 
 				mesonFlags = [
@@ -99,7 +99,8 @@ in
 					(lib.mesonEnable "gallium-xa" false)
 				] ++ prev.mesonFlags;
 			})).drivers;
-		opengl.package = pkgs.mesa;
+		#opengl.package = pkgs.mesa;
 		opengl.extraPackages = [ libmali-valhall-g610 ];
+		opengl.enable = true;
 	};
 }

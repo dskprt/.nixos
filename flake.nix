@@ -19,14 +19,10 @@
 		nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
 		# wired-notify notification daemon
-		wired.url = "github:Toqozz/wired-notify";
+		#wired.url = "github:Toqozz/wired-notify";
 
 		# Stylix
 		#stylix.url = "github:danth/stylix";
-
-		# Disko
-		disko.url = "github:nix-community/disko";
-		disko.inputs.nixpkgs.follows = "nixpkgs";
 
 		# cerberus-specific stuff
 		#linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
@@ -39,7 +35,7 @@
 		nixpkgs,
 		home-manager,
 		impermanence,
-		wired,
+		#wired,
 		#linux-rockchip,
 		rkbin,
 		uboot,
@@ -58,9 +54,9 @@
 		};
 
 		aarch64_pkgs_cross = import nixpkgs {
-			# localSystem = "x86_64-linux";
-			# crossSystem = "aarch64-linux";
-			system = "aarch64-linux";
+			localSystem = "x86_64-linux";
+			crossSystem = "aarch64-linux";
+			# system = "aarch64-linux";
 			config = { allowUnfree = true; };
 		};
 
@@ -72,7 +68,6 @@
 			"moon" = nixpkgs.lib.nixosSystem {
 				specialArgs = { inherit inputs; };
 				modules = [
-					inputs.disko.nixosModules.disko
 					./system/moon
 
 					{
@@ -85,7 +80,6 @@
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; inherit x86_64_pkgs_cross; };
 				modules = [
-					inputs.disko.nixosModules.disko
 					./system/cerberus
 					./system/cerberus/boot/kernel/build.nix
 
@@ -108,7 +102,6 @@
 				system = "aarch64-linux";
 				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
 				modules = [
-					inputs.disko.nixosModules.disko
 					./system/sdimage.nix
 					./system/sariel-aarch64
 

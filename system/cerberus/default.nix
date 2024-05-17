@@ -11,7 +11,7 @@
 		./users
 		./boot
 		./software
-		#./hardware/g610.nix
+		./hardware/g610.nix
 		./hardware/ap6275p.nix
 	];
 
@@ -34,7 +34,6 @@
 		};
 
 		optimise.automatic = true;
-		channel.enable = false;
 	};
 
 	fonts.fontDir.enable = true;

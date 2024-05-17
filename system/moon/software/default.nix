@@ -1,7 +1,8 @@
 { pkgs, ... }: {
 	imports = [
-		./desktop/enlightenment
-		./desktop/greetd.nix
+		#./desktop/enlightenment
+		#./desktop/greetd.nix
+		./desktop/gnome
 	];
 
 	services.tlp.enable = true;

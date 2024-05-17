@@ -70,7 +70,6 @@
 		};
 
 		optimise.automatic = true;
-		channel.enable = false;
 	};
 
 	fonts.fontDir.enable = true;
