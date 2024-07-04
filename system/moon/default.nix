@@ -72,6 +72,12 @@
 		optimise.automatic = true;
 	};
 
+	documentation.man.enable = false;
+	documentation.dev.enable = false;
+	documentation.info.enable = false;
+	documentation.doc.enable = false;
+	documentation.nixos.enable = true;
+
 	fonts.fontDir.enable = true;
  
 	powerManagement = {

@@ -1,28 +1,29 @@
 { inputs, pkgs, lib, aarch64_pkgs_cross, ... }:
 let
-	# mali-g610-firmware = pkgs.stdenvNoCC.mkDerivation {
-	# 	pname = "mali-g610-firmware";
-	# 	version = "unstable";
+	mali-g610-firmware = pkgs.stdenvNoCC.mkDerivation {
+		pname = "mali-g610-firmware";
+		version = "unstable";
 
-	# 	dontBuild = true;
-	# 	dontFixup = true;
-	# 	compressFirmware = false;
+		dontBuild = true;
+		dontFixup = true;
+		compressFirmware = false;
 
-	# 	src = pkgs.fetchurl {
-	# 		url = "https://github.com/JeffyCN/mirrors/raw/e08ced3e0235b25a7ba2a3aeefd0e2fcbd434b68/firmware/g610/mali_csffw.bin";
-	# 		hash = "sha256-jnyCGlXKHDRcx59hJDYW3SX8NbgfCQlG8wKIbWdxLfU=";
-	# 	};
+		# src = pkgs.fetchurl {
+		# 	url = "https://github.com/JeffyCN/mirrors/raw/e08ced3e0235b25a7ba2a3aeefd0e2fcbd434b68/firmware/g610/mali_csffw.bin";
+		# 	hash = "sha256-jnyCGlXKHDRcx59hJDYW3SX8NbgfCQlG8wKIbWdxLfU=";
+		# };
+		src = ./mali_csffw.bin;
 
-	# 	buildCommand = ''
-	# 		mkdir -p $out/lib/firmware
-	# 		cp $src $out/lib/firmware/
-	# 	'';
-	# };
+		buildCommand = ''
+			mkdir -p $out/lib/firmware/arm/mali/arch10.8
+			cp $src $out/lib/firmware/arm/mali/arch10.8/mali_csffw.bin
+		'';
+	};
 
-	mali-g610-firmware = (pkgs.runCommandNoCC "mali-g610-csffw" {} ''
-		mkdir -p $out/lib/firmware/arm/mali/arch10.8
-		cp ${./mali_csffw.bin} $out/lib/firmware/arm/mali/arch10.8/mali_csffw.bin
-    '');
+	# mali-g610-firmware = (pkgs.runCommandNoCC "mali-g610-csffw" {} ''
+	# 	mkdir -p $out/lib/firmware/arm/mali/arch10.8
+	# 	cp ${./mali_csffw.bin} $out/lib/firmware/arm/mali/arch10.8/mali_csffw.bin
+    # '');
 
 	libmali-valhall-g610 = pkgs.stdenv.mkDerivation rec {
 		pname = "libmali-valhall-g610";

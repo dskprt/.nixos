@@ -1,16 +1,17 @@
  { pkgs, ... }: {
+
 	services.xserver = {
 		displayManager.sddm.enable = false;
 		displayManager.lightdm.enable = false;
 		displayManager.gdm.enable = false;
-		displayManager.startx.enable = true;
+		#displayManager.startx.enable = true;
 	};
 
 	services.greetd = {
 		enable = true;
 		settings = {
 			default_session = {
-				command = "${pkgs.greetd.tuigreet}/bin/tuigreet -i --asterisks --time --cmd startx";
+				command = "${pkgs.greetd.tuigreet}/bin/tuigreet -i --asterisks --time --cmd startplasma-wayland";
 				user = "greeter";
 			};
 		};

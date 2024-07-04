@@ -1,8 +1,10 @@
 { pkgs, ... }: {
 	imports = [
 		#./desktop/enlightenment
-		#./desktop/greetd.nix
-		./desktop/gnome
+		./desktop/greetd.nix
+		#./desktop/gnome
+		#./desktop/hyprland.nix
+		./desktop/plasma6
 	];
 
 	#services.tlp.enable = true;

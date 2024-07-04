@@ -23,9 +23,7 @@ in
 		ap6275p-firmware
 	];
 
-	# this is needed, otherwise the driver won't be able to find the firmware
-	# aparently this doesn't work on the system even though it worked on the sd image
-	# systemd.tmpfiles.rules = [
-	# 	"L+ /lib/firmware/ap6275p - - - - ${ap6275p-firmware}/lib/firmware/ap6275p"
-	# ];
+	systemd.tmpfiles.rules = [
+		"L+ /lib/firmware - - - - /run/current-system/firmware"
+	];
 }

@@ -1,39 +1,36 @@
-{ pkgs, inputs, ... }: {
-	services.xserver = {
-		enable = true;
+{ pkgs, ... }:
+{
 
-		excludePackages = [
-			pkgs.xterm
-		];
+	services = {
+		#displayManager.sddm = {
+		#	enable = true;
+		#	wayland.enable = true;
+		#};
 
-		desktopManager.plasma6 = {
-			enable = true;
-			enableQt5Integration = true;
-		};
-		
-		displayManager.sddm.enable = false;
-		displayManager.startx.enable = true;
+		desktopManager.plasma6.enable = true;
+
+		colord.enable = true;
 	};
 
-	environment.plasma6.excludePackages = with pkgs; [
-		pkgs.kdePackages.elisa
-		kdePackages.okular
+	environment.plasma6.excludePackages = with pkgs.kdePackages; [
+		elisa
 	];
 
 	environment.systemPackages = with pkgs; [
-		kdePackages.plasma-pa
-		kdePackages.plasma-nm
+		colord
+		kdePackages.colord-kde
+		
 		kdePackages.wacomtablet
 		
 		kdePackages.kdialog
-		
-		kdePackages.bluez-qt
-		kdePackages.bluedevil
 
 		kdePackages.partitionmanager
 		kdePackages.kcalc
 
-		gnome.adwaita-icon-theme
+		fluent-gtk-theme
+		paper-icon-theme
+
+		rose-pine-cursor
 
 		xdg-desktop-portal
 		kdePackages.xdg-desktop-portal-kde

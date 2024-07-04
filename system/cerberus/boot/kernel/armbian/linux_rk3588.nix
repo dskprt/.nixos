@@ -23,10 +23,10 @@ in
 			name = "export-symbol-iommu";
 			patch = ../patches/02-export-symbol-iommu.patch;
 		}
-		{
-			name = "rockchip-vop2-setup";
-			patch = ../patches/03-rockchip_drm_vop2.patch;
-		}
+		# {
+		# 	name = "rockchip-vop2-setup";
+		# 	patch = ../patches/03-rockchip_drm_vop2.patch;
+		# }
 	];
 	#hardeningDisable = [ "relro" ];
 

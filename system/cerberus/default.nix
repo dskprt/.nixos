@@ -7,7 +7,7 @@
 		./appimage.nix
 
 		# submodules
-		./filesystems
+		#./filesystems
 		./users
 		./boot
 		./software
@@ -63,6 +63,7 @@
 
 	## networking
 	networking.networkmanager.enable = true;
+	networking.wireless.enable = lib.mkForce false;
 	# the kernel(?) presents with a wlan1 device which seems to be the SOC built-in rkwifi
 	# chip that always is disconnected and has NO-CARRIER, so disable it
 	systemd.network.netdevs.wlan1.enable = false;

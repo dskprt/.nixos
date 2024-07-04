@@ -12,7 +12,7 @@ in
 		#./hyprland
 		#./stylix.nix
 		#./e16
-		./gnome
+		#./gnome
 	];
 
 	nixpkgs = {
@@ -66,7 +66,7 @@ in
 
 		#mplayer
 		#discord
-		audacious
+		strawberry-qt6
 		vlc
 		#krita
 		obsidian
@@ -98,11 +98,18 @@ in
 		soundfont-fluid
 
 		spotify
+		nicotine-plus
 
 		#oneko
 		vesktop
 		#kdePackages.konversation
-		prusa-slicer
+		#prusa-slicer
+
+		# needed for tmodloader
+		dotnet-runtime_8
+
+		# IDEs
+		#jetbrains.clion
 
 		(vscode-with-extensions.override {
 			vscodeExtensions = with vscode-extensions; [
@@ -128,6 +135,8 @@ in
 				(ms-dotnettools.csharp.overrideAttrs (_: { sourceRoot = "extension"; }))
 				(ms-dotnettools.vscodeintellicode-csharp.overrideAttrs (_: { sourceRoot = "extension"; }))
 				(ms-dotnettools.dotnet-maui.overrideAttrs (_: { sourceRoot = "extension"; }))
+				ms-dotnettools.csdevkit
+				ms-dotnettools.vscode-dotnet-runtime
 			]) ++ [
 				community-vscode-extensions."13xforever".language-x86-64-assembly
 			];
@@ -168,11 +177,6 @@ in
 			set -x WINEDEBUG -all
 
 			set -x EM_CACHE ~/.cache/emscripten
-
-			set -x DOTNET_ROOT /@/data/programs/linux/dotnet_sdk-8
-			
-			fish_add_path $DOTNET_ROOT
-			fish_add_path /@/data/programs/JetBrains/Toolbox/apps/scripts
 
 			function runbg
 				$argv &> /dev/null &

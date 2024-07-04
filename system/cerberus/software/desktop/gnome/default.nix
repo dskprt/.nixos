@@ -33,7 +33,7 @@
 	services.gnome.sushi.enable = lib.mkForce false;
 
 	services.packagekit.enable = lib.mkForce false;
-	services.power-profiles-daemon.enable = lib.mkForce false;
+	services.power-profiles-daemon.enable = lib.mkForce true;
 
 	programs.gnome-terminal.enable = lib.mkForce false;
 	programs.geary.enable = lib.mkForce true;

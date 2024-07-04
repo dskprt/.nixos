@@ -24,15 +24,24 @@
 		# Stylix
 		#stylix.url = "github:danth/stylix";
 
+		nix-index-database.url = "github:nix-community/nix-index-database";
+		nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
+		# Nix User Repository
+		nur.url = "github:nix-community/NUR";
+
 		# cerberus-specific stuff
 		#linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
 		rkbin = { url = "github:armbian/rkbin"; flake = false; };
 		uboot = { url = "github:u-boot/u-boot/v2024.07-rc2"; flake = false; };
 		armbian-firmware = { url = "github:armbian/firmware"; flake = false; };
+		#mesa-updated = { url = "github:K900/nixpkgs/mesa-24.1"; };
 	};
 
 	outputs = {
 		nixpkgs,
+		nur,
+		#mesa-updated,
 		home-manager,
 		impermanence,
 		#wired,
@@ -40,6 +49,7 @@
 		rkbin,
 		uboot,
 		armbian-firmware,
+		nix-index-database,
 		...
 	}@inputs: let
 		x86_64_pkgs_native = import nixpkgs {
@@ -56,9 +66,13 @@
 		aarch64_pkgs_cross = import nixpkgs {
 			localSystem = "x86_64-linux";
 			crossSystem = "aarch64-linux";
-			# system = "aarch64-linux";
 			config = { allowUnfree = true; };
 		};
+
+		# mesa-updated_cross = import mesa-updated {
+		# 	localSystem = "x86_64-linux";
+		# 	crossSystem = "aarch64-linux";
+		# };
 
 		# pkgs = import nixpkgs {
 		# 	config = { allowUnfree = true; };
@@ -68,7 +82,9 @@
 			"moon" = nixpkgs.lib.nixosSystem {
 				specialArgs = { inherit inputs; };
 				modules = [
+					nur.nixosModules.nur
 					./system/moon
+					nix-index-database.nixosModules.nix-index
 
 					{
 						boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
@@ -78,9 +94,11 @@
 			};
 			"cerberus" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
-				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; inherit x86_64_pkgs_cross; };
+				specialArgs = { inherit inputs aarch64_pkgs_cross x86_64_pkgs_cross; };
 				modules = [
+					./system/sdimage.nix
 					./system/cerberus
+					#./system/cerberus/filesystem
 					./system/cerberus/boot/kernel/build.nix
 
 					{
@@ -136,17 +154,17 @@
 			"scarlet@moon" = home-manager.lib.homeManagerConfiguration {
 				pkgs = import nixpkgs {
 					system = "x86_64-linux";
-					overlays =
-						import ./pkgs/default.nix
-						++ [
-							wired.overlays.default
-						];
+					# overlays =
+					# 	import ./pkgs/default.nix
+					# 	++ [
+					# 		wired.overlays.default
+					# 	];
 				};
 				
 				extraSpecialArgs = { inherit inputs; };
 				
 				modules = [
-					wired.homeManagerModules.default
+					#wired.homeManagerModules.default
 					#stylix.homeManagerModules.stylix
 					./user/scarlet/home
 				];
@@ -177,7 +195,7 @@
 			};
 		};
 
-		devShells.x86_64-linux.kernelEnv = (x86_64_pkgs_native.buildFHSUserEnv {
+		devShells.x86_64-linux.kernelEnv = (x86_64_pkgs_native.buildFHSUserEnv.override { stdenv = x86_64_pkgs_native.llvmPackages_18.stdenv; } {
 			name = "kernel-build-env";
 
 			targetPkgs = pkgs: (with pkgs; [
@@ -188,6 +206,7 @@
 				aarch64_pkgs_cross.gccStdenv.cc
 				# native gcc
 				gcc
+				llvmPackages_18.clang
 			] ++ pkgs.linux.nativeBuildInputs);
 
 			runScript = x86_64_pkgs_native.writeScript "init.sh" ''
