@@ -4,6 +4,6 @@
 
 	boot.plymouth = {
 		enable = true;
-		theme = "tribar";
+		theme = "spinner";
 	};
 }

@@ -8,6 +8,7 @@
 			];
 
 			desktopManager.gnome.enable = true;
+			displayManager.gdm.enable = true;
 		};
 		gnome = {
 			core-os-services.enable = true;
@@ -57,20 +58,13 @@
 		gnome.dconf-editor
 
 		cinnamon.nemo-with-extensions
-		# cinnamon.nemo-fileroller
+		cinnamon.nemo-fileroller
 
 		gnome.adwaita-icon-theme
-
-		konsole # terminal
+		
 		gthumb # image viewer
 
-		# nightfox-gtk-theme
-		# fluent-gtk-theme
-		# paper-icon-theme
-
-		# rose-pine-cursor
-
-		#gnomeExtensions.forge
+		gjs
 	];
 
 	xdg.mime.defaultApplications = {
@@ -80,13 +74,4 @@
 
 	xdg.portal.enable = true;
 	xdg.portal.xdgOpenUsePortal = true;
-
-	# experiment: nemo as desktop icon manager
-	services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
-		[org.gnome.desktop.background]
-		show-desktop-icons=false
-		[org.nemo.desktop]
-		show-desktop-icons=true
-	'';
 }
-

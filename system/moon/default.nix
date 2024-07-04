@@ -89,6 +89,11 @@
 
 	## networking
 	networking.networkmanager.enable = true;
+	networking.networkmanager.plugins = with pkgs; [
+		networkmanager_strongswan
+		networkmanager-openvpn
+		networkmanager-l2tp
+	];
 
 	## time
 	time.timeZone = "Europe/Warsaw";
@@ -116,6 +121,7 @@
 	# networking.firewall.allowedTCPPorts = [ ... ];
 	# networking.firewall.allowedUDPPorts = [ ... ];
 	networking.firewall.enable = true;
+	networking.firewall.checkReversePath = false;
 
 	## https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
 	system.stateVersion = "23.11";

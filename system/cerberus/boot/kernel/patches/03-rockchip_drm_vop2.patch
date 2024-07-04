@@ -1,0 +1,63 @@
+diff '--color=auto' -urpN a/drivers/gpu/drm/rockchip/rockchip_drm_vop2.c b/drivers/gpu/drm/rockchip/rockchip_drm_vop2.c
+--- a/drivers/gpu/drm/rockchip/rockchip_drm_vop2.c	2024-06-18 20:12:05.619878299 +0200
++++ b/drivers/gpu/drm/rockchip/rockchip_drm_vop2.c	2024-06-18 20:30:38.821722441 +0200
+@@ -9157,6 +9157,50 @@ static void vop2_setup_port_mux(struct v
+ 	spin_unlock(&vop2->reg_lock);
+ }
+ 
++// https://github.com/Fruit-Pi/kernel/commit/29af993b46f024360e6d02c0d26c9fd3057aa918?diff=split&w=0
++static u16 vop2_calc_bg_ovl_and_port_mux(struct vop2_video_port *vp)
++{
++	struct vop2_video_port *prev_vp;
++	struct vop2 *vop2 = vp->vop2;
++	const struct vop2_data *vop2_data = vop2->data;
++	u16 port_mux_cfg = 0;
++	u8 port_mux;
++	u8 used_layers = 0;
++	int i;
++
++	for (i = 0; i < vop2_data->nr_vps - 1; i++) {
++		prev_vp = &vop2->vps[i];
++		used_layers += hweight32(prev_vp->win_mask);
++		/*
++		 * when a window move from vp0 to vp1, or vp0 to vp2,
++		 * it should flow these steps:
++		 * (1) first commit, disable this windows on VP0,
++		 *     keep the win_mask of VP0.
++		 * (2) second commit, set this window to VP1, clear
++		 *     the corresponding win_mask on VP0, and set the
++		 *     corresponding win_mask on VP1.
++		 *  This means we only know the decrease of the windows
++		 *  number of VP0 until VP1 take it, so the port_mux of
++		 *  VP0 should change at VP1's commit.
++		 */
++		if (used_layers == 0)
++			port_mux = 8;
++		else
++			port_mux = used_layers - 1;
++
++		port_mux_cfg |= port_mux << (prev_vp->id * 4);
++
++		if (port_mux > vop2_data->nr_mixers)
++			prev_vp->bg_ovl_dly = 0;
++		else
++			prev_vp->bg_ovl_dly = (vop2_data->nr_mixers - port_mux) << 1;
++	}
++
++	port_mux_cfg |= 7 << (4 * (vop2->data->nr_vps - 1));
++
++	return port_mux_cfg;
++}
++
+ static void vop2_setup_layer_mixer_for_vp(struct vop2_video_port *vp,
+ 					  const struct vop2_zpos *vop2_zpos)
+ {
+@@ -9221,6 +9265,8 @@ static void vop2_setup_layer_mixer_for_v
+ 	if (new_layer_cfg != old_layer_cfg)
+ 		VOP_CTRL_SET(vop2, ovl_cfg_done_port, vp->id);
+ 	VOP_CTRL_SET(vop2, ovl_port_mux_cfg_done_imd, 0);
++
++	vop2_setup_port_mux(vp);
+ }
+ 
+ static void vop3_setup_layer_sel_for_vp(struct vop2_video_port *vp,

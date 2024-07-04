@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-	#boot.initrd.kernelModules = [ "amdgpu" ];
+	boot.initrd.kernelModules = [ "amdgpu" ];
 	services.xserver.videoDrivers = [ "amdgpu" ];
 
 	hardware.opengl.driSupport = true;
@@ -9,18 +9,18 @@
 		vaapiVdpau
 		libvdpau-va-gl
 
-		#rocmPackages.rocm-runtime
-		#rocmPackages.rocm-smi
-		#rocmPackages.rocm-device-libs
-		#rocmPackages.rocminfo
-		#rocmPackages.clr
+		rocmPackages.rocm-runtime
+		rocmPackages.rocm-smi
+		rocmPackages.rocm-device-libs
+		rocmPackages.rocminfo
+		rocmPackages.clr
 		#rocmPackages.clr.icd
 		#rocmPackages.miopen
 
 		#clinfo
 	];
 
-	#systemd.tmpfiles.rules = [
-	#	"L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-	#];
+	systemd.tmpfiles.rules = [
+		"L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+	];
 }

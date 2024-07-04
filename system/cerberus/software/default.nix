@@ -1,6 +1,7 @@
 { pkgs, x86_64_pkgs_cross, ... }: {
 	imports = [
 		./desktop/gnome
+		./sunshine.nix
 	];
 
 	services.tlp.enable = true;

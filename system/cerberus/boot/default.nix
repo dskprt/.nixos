@@ -12,7 +12,7 @@ in
 	];
 	
 	boot.kernelPackages = aarch64_pkgs_cross.recurseIntoAttrs (aarch64_pkgs_cross.linuxPackagesFor
-		(aarch64_pkgs_cross.callPackage ./kernel/linux_rk3588.nix {
+		(aarch64_pkgs_cross.callPackage ./kernel/armbian/linux_rk3588.nix {
 			inherit inputs;
 			inherit aarch64_pkgs_cross;
 		}));

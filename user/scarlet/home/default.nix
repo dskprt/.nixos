@@ -11,7 +11,8 @@ in
 		#./cde
 		#./hyprland
 		#./stylix.nix
-		./e16
+		#./e16
+		./gnome
 	];
 
 	nixpkgs = {
@@ -71,15 +72,15 @@ in
 		obsidian
 
 		lutris
-		legendary-gl
+		#legendary-gl
 		prismlauncher
 		#clonehero
 		ferium
 		#ckan
 
-		kompare
+		#kompare
 		krita
-		okteta
+		#okteta
 
 		#graalvm-ce
 		temurin-bin
