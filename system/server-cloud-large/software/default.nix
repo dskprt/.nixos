@@ -2,7 +2,12 @@
 {
 	services.openssh = {
 		enable = true;
-		settings.X11Forwarding = false;
+		settings = {
+			PrintMotd = true;
+			PermitRootLogin = "no";
+			PasswordAuthentication = false;
+			KbdInteractiveAuthentication = false;
+		};
 	};
 
 	programs.git = {
