@@ -1,11 +1,20 @@
 { ... }:
 {
+	environment.etc."containers/storage.conf" = {
+		text = ''
+			[storage]
+			driver = "overlay"
+			graphroot = "/@/data/oci/containers/storage"
+			runroot = "/run/containers/storage"
+		'';
+	};
 	virtualisation = {
 		containers.enable = true;
 
 		podman = {
 			enable = true;
 			dockerCompat = true;
+			dockerSocket = true;
 
 			defaultNetwork.settings.dns_enabled = true;
 		};

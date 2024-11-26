@@ -9,9 +9,9 @@
 
 	fileSystems."/@".neededForBoot = true;
 
-	# fileSystems."/@/data" = {
-	# 	device = "/dev/disk/by-uuid/3c128f46-0f69-46d4-ad26-03420dd47ab0";
-	# 	fsType = "xfs";
-	# 	options = [ "discard" "noatime" "nodiratime" "nofail" ];
-	# };
+	fileSystems."/@/data" = {
+		device = "/dev/disk/by-uuid/0836aed3-44ba-4e44-be5d-b18dbe887d79";
+		fsType = "xfs";
+		options = [ "discard" "noatime" "nodiratime" "nofail" ];
+	};
 }
