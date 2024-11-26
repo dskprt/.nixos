@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
-	users.users.master = {
+	users.users.cmdr = {
 		uid = 1000;
 		group = "users";
 		isNormalUser = true;
 		home = "/home/admin";
-		shell = pkgs.fish;
+		shell = pkgs.bash;
 		hashedPasswordFile = "/@/admin.pass";
 		extraGroups = [ "wheel" "audio" "video" "dialout" "render" "docker" ];
 		subUidRanges = [
