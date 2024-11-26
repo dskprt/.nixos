@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 	users.users.master = {
 		uid = 1000;
 		group = "users";

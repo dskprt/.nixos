@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 	imports = [
-		../../../user/cmdr
+		./cmdr.nix
 	];
 
 	users.mutableUsers = false;
