@@ -44,6 +44,8 @@
 		util-linux
 
 		xfsprogs
+
+		podman-compose
 	];
 
 	environment.variables = {

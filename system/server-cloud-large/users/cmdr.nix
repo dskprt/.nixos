@@ -7,7 +7,7 @@
 		home = "/home/admin";
 		shell = pkgs.bash;
 		hashedPasswordFile = "/@/admin.pass";
-		extraGroups = [ "wheel" "audio" "video" "dialout" "render" "docker" ];
+		extraGroups = [ "wheel" "audio" "video" "dialout" "render" "podman" ];
 		subUidRanges = [
 			{ startUid = 100000; count = 65536; }
 		];

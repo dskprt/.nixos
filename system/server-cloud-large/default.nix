@@ -75,17 +75,6 @@
 		"en_US.UTF-8/UTF-8"
 	];
 
-	## firewall
-	# networking.firewall.allowedTCPPorts = [ ... ];
-	# networking.firewall.allowedUDPPorts = [ ... ];
-	networking.firewall.enable = true;
-	networking.firewall.checkReversePath = false;
-
-	networking.firewall.allowedTCPPorts = [
-		80
-		22
-	];
-
 	## https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
 	system.stateVersion = "25.05";
 }
