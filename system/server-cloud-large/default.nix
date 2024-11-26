@@ -11,6 +11,9 @@
 		./boot
 		./software
 
+		./firewall.nix
+		./podman.nix
+
 		# hardware configuration
 		./hardware.nix
 	];
