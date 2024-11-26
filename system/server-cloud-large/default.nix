@@ -10,8 +10,6 @@
 		./users
 		./boot
 		./software
-
-		./services.nix
 	];
 
 	nixpkgs = {
