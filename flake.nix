@@ -114,7 +114,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					nur.nixosModules.nur
-					./system/server-large
+					./system/server-cloud-large
 
 					{
 						networking.hostName = "gangut";
