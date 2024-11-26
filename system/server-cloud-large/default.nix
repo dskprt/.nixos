@@ -10,6 +10,9 @@
 		./users
 		./boot
 		./software
+
+		# hardware configuration
+		./hardware.nix
 	];
 
 	nixpkgs = {
