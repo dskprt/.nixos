@@ -63,6 +63,7 @@
 
 	## networking
 	systemd.network.enable = true;
+	networking.useNetworkd = true;
 
 	## time
 	time.timeZone = "Europe/Zurich";
