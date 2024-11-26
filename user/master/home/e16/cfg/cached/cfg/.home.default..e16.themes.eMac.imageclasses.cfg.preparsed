@@ -1,0 +1,1309 @@
+1001 1
+12 999
+  100 MENU_TITLEBAR_CLOSE
+  351 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  353 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  352 "artwork/borders/menu/dockmenu_close_clicked.png"
+  357 3 3 3 3
+  354 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/menu/dockmenu_close_clicked.png"
+  357 3 3 3 3
+  359 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  361 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  360 "artwork/borders/menu/dockmenu_close_clicked.png"
+  357 3 3 3 3
+  362 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/menu/dockmenu_close_normal.png"
+  357 3 4 3 3
+  363 "artwork/borders/menu/dockmenu_close_clicked.png"
+  357 3 3 3 3
+  358 4 4 4 4
+1000
+12 999
+  100 MENU_TITLEBAR
+  351 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  353 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  352 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  354 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  356 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  355 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  359 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  361 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  360 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  362 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  364 "artwork/borders/menu/dockmenu_title.png"
+  357 3 4 3 3
+  363 "artwork/borders/menu/dockmenu_title.png"
+  357 3 3 3 3
+  358 4 4 4 4
+1000
+12 999
+  100 WIN_TITLEBAR_NORMAL
+  351 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  353 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  352 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  354 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  356 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  355 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  359 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  361 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  360 "artwork/borders/unselected/titlebar.png"
+  357 3 3 2 1
+  362 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  364 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  363 "artwork/borders/selected/titlebar.png"
+  357 3 3 2 1
+  358 0 0 3 3
+1000
+12 999
+  100 WIN_TITLEBAR_TEXT
+  351 "artwork/borders/unselected/titlebar_text.png"
+  357 1 1 2 2
+  354 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  356 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  355 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  362 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  364 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  363 "artwork/borders/selected/titlebar_text.png"
+  357 1 1 2 2
+  358 3 3 6 3
+1000
+12 999
+  100 WIN_TITLEBAR_TRASH_TEXT
+  351 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  353 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  352 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  354 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  356 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  355 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  359 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  361 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  360 "artwork/borders/unselected/titlebar_trash_text.png"
+  357 20 2 1 1
+  362 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  364 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  363 "artwork/borders/selected/titlebar_trash_text.png"
+  357 20 2 1 1
+  358 23 23 6 3
+1000
+12 999
+  100 WIN_TITLEBAR_TLCORNER
+  351 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  353 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  352 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  354 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  356 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  355 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  359 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  361 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  360 "artwork/borders/unselected/tlcorner.png"
+  357 3 0 2 2
+  362 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  364 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  363 "artwork/borders/selected/tlcorner.png"
+  357 3 0 2 2
+  358 3 3 3 3
+1000
+12 999
+  100 WIN_TITLEBAR_TRCORNER
+  351 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  353 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  352 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  354 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  356 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  355 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  359 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  361 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  360 "artwork/borders/unselected/trcorner.png"
+  357 0 3 2 2
+  362 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  364 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  363 "artwork/borders/selected/trcorner.png"
+  357 0 3 2 2
+  358 3 3 3 3
+1000
+12 999
+  100 WIN_LBORDER
+  351 "artwork/borders/unselected/lborder.png"
+  357 2 3 3 0
+  353 "artwork/borders/unselected/lborder.png"
+  357 2 3 3 0
+  352 "artwork/borders/unselected/lborder.png"
+  357 2 3 3 0
+  354 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+  356 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+  355 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+  359 "artwork/borders/unselected/lborder.png"
+  357 2 3 2 0
+  361 "artwork/borders/unselected/lborder.png"
+  357 2 3 2 0
+  360 "artwork/borders/unselected/lborder.png"
+  357 2 3 2 0
+  362 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+  364 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+  363 "artwork/borders/selected/lborder.png"
+  357 2 3 2 0
+1000
+12 999
+  100 WIN_RBORDER
+  351 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  353 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  352 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  354 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+  356 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+  355 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+  359 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  361 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  360 "artwork/borders/unselected/rborder.png"
+  357 2 3 2 0
+  362 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+  364 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+  363 "artwork/borders/selected/rborder.png"
+  357 2 3 2 0
+1000
+12 999
+  100 WIN_RESCALE
+  351 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  353 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  352 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  354 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+  356 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+  355 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+  359 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  361 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  360 "artwork/borders/unselected/scale1.png"
+  357 1 1 1 1
+  362 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+  364 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+  363 "artwork/borders/selected/scale1.png"
+  357 1 1 1 1
+1000
+12 999
+  100 WIN_RESCALE2
+  351 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  353 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  352 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  354 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+  356 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+  355 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+  359 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  361 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  360 "artwork/borders/unselected/scale2.png"
+  357 1 1 1 1
+  362 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+  364 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+  363 "artwork/borders/selected/scale2.png"
+  357 1 1 1 1
+1000
+12 999
+  100 WIN_LLCORNER
+  351 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  353 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  352 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  354 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+  356 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+  355 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+  359 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  361 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  360 "artwork/borders/unselected/llcorner.png"
+  357 1 1 1 1
+  362 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+  364 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+  363 "artwork/borders/selected/llcorner.png"
+  357 1 1 1 1
+1000
+12 999
+  100 WIN_LRCORNER
+  351 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  353 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  352 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  354 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+  356 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+  355 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+  359 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  361 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  360 "artwork/borders/unselected/lrcorner.png"
+  357 1 1 1 1
+  362 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+  364 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+  363 "artwork/borders/selected/lrcorner.png"
+  357 1 1 1 1
+1000
+12 999
+  100 WIN_BTMBORDER
+  351 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  353 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  352 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  354 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+  356 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+  355 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+  359 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  361 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  360 "artwork/borders/unselected/btmborder.png"
+  357 2 2 0 0
+  362 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+  364 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+  363 "artwork/borders/selected/btmborder.png"
+  357 2 2 0 0
+1000
+12 999
+  100 WIN_BTN_CLOSE
+  351 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  353 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  352 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  354 "artwork/borders/buttons/btn_close_normal.png"
+  357 2 2 0 0
+  356 "artwork/borders/buttons/btn_close_normal.png"
+  357 2 2 0 0
+  355 "artwork/borders/buttons/btn_close_clicked.png"
+  357 2 2 0 0
+  359 "artwork/borders/buttons/btn_placeholder_sticky.png"
+  357 2 2 0 0
+  361 "artwork/borders/buttons/btn_placeholder_sticky.png"
+  357 2 2 0 0
+  360 "artwork/borders/buttons/btn_placeholder_sticky.png"
+  357 2 2 0 0
+  362 "artwork/borders/buttons/btn_close_sticky.png"
+  357 2 2 0 0
+  364 "artwork/borders/buttons/btn_close_sticky.png"
+  357 2 2 0 0
+  363 "artwork/borders/buttons/btn_close_sticky_clicked.png"
+  357 2 2 0 0
+1000
+12 999
+  100 WIN_BTN_MAXFULL
+  351 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  353 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  352 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  354 "artwork/borders/buttons/btn_maxfull_normal.png"
+  357 2 2 0 0
+  356 "artwork/borders/buttons/btn_maxfull_normal.png"
+  357 2 2 0 0
+  355 "artwork/borders/buttons/btn_maxfull_clicked.png"
+  357 2 2 0 0
+  359 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  361 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  360 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  362 "artwork/borders/buttons/btn_maxfull_normal.png"
+  357 2 2 0 0
+  364 "artwork/borders/buttons/btn_maxfull_normal.png"
+  357 2 2 0 0
+  363 "artwork/borders/buttons/btn_maxfull_clicked.png"
+  357 2 2 0 0
+1000
+12 999
+  100 WIN_BTN_SHADE
+  351 "artwork/borders/buttons/btn_placeholder.png"
+  357 0 0 0 0
+  353 "artwork/borders/buttons/btn_placeholder.png"
+  357 0 0 0 0
+  352 "artwork/borders/buttons/btn_placeholder.png"
+  357 0 0 0 0
+  354 "artwork/borders/buttons/btn_shade_normal.png"
+  357 2 2 0 0
+  356 "artwork/borders/buttons/btn_shade_normal.png"
+  357 2 2 0 0
+  355 "artwork/borders/buttons/btn_shade_clicked.png"
+  357 2 2 0 0
+  359 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  361 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  360 "artwork/borders/buttons/btn_placeholder.png"
+  357 2 2 0 0
+  362 "artwork/borders/buttons/btn_shade_normal.png"
+  357 2 2 0 0
+  364 "artwork/borders/buttons/btn_shade_normal.png"
+  357 2 2 0 0
+  363 "artwork/borders/buttons/btn_shade_clicked.png"
+  357 2 2 0 0
+1000
+12 999
+  100 TRANS_BTN_SHADE
+  351 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  353 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  352 "artwork/borders/transient/btn_shade_clicked.png"
+  357 3 3 3 3
+  354 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/transient/btn_shade_clicked.png"
+  357 3 3 3 3
+  359 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  361 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  360 "artwork/borders/transient/btn_shade_clicked.png"
+  357 3 3 3 3
+  362 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/transient/btn_shade_normal.png"
+  357 3 3 3 3
+  363 "artwork/borders/transient/btn_shade_clicked.png"
+  357 3 3 3 3
+1000
+12 999
+  100 TRANS_BTN_MAX
+  351 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  353 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  352 "artwork/borders/transient/btn_max_clicked.png"
+  357 3 3 3 3
+  354 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/transient/btn_max_clicked.png"
+  357 3 3 3 3
+  359 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  361 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  360 "artwork/borders/transient/btn_max_clicked.png"
+  357 3 3 3 3
+  362 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/transient/btn_max_normal.png"
+  357 3 3 3 3
+  363 "artwork/borders/transient/btn_max_clicked.png"
+  357 3 3 3 3
+1000
+12 999
+  100 TRANS_BTN_CLOSE
+  351 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  353 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  352 "artwork/borders/transient/btn_close_clicked.png"
+  357 3 3 3 3
+  354 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/transient/btn_close_clicked.png"
+  357 3 3 3 3
+  359 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  361 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  360 "artwork/borders/transient/btn_close_clicked.png"
+  357 3 3 3 3
+  362 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/transient/btn_close_normal.png"
+  357 3 3 3 3
+  363 "artwork/borders/transient/btn_close_clicked.png"
+  357 3 3 3 3
+1000
+12 999
+  100 TRANS_TIP
+  351 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  353 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  352 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  354 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+  359 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  361 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  360 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  362 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+  363 "artwork/borders/transient/tip_normal.png"
+  357 3 3 3 3
+1000
+12 999
+  100 TRANS_BDR_LEFT
+  351 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  353 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  352 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  354 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  356 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  355 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  359 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  361 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  360 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  362 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  364 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+  363 "artwork/borders/transient/leftborder.png"
+  357 0 0 2 0
+1000
+12 999
+  100 TRANS_BDR_RIGHT
+  351 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  353 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  352 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  354 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  356 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  355 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  359 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  361 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  360 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  362 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  364 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+  363 "artwork/borders/transient/rightborder.png"
+  357 0 0 1 0
+1000
+12 999
+  100 TRANS_BDR_BOTTOM
+  351 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  353 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  352 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  354 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  356 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  355 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  359 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  361 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  360 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  362 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  364 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+  363 "artwork/borders/transient/bottom.png"
+  357 0 0 0 0
+1000
+12 999
+  100 TRANS_BDR_LEFTCORNER
+  351 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  353 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  352 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  354 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  356 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  355 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  359 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  361 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  360 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  362 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  364 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+  363 "artwork/borders/transient/leftcorner.png"
+  357 0 0 1 0
+1000
+12 999
+  100 TRANS_BDR_RIGHTCORNER
+  351 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  353 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  352 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  354 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  356 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  355 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  359 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  361 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  360 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  362 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  364 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+  363 "artwork/borders/transient/rightcorner.png"
+  357 0 0 0 0
+1000
+12 999
+  100 TRANS_BDR_TITLEBAR
+  351 "artwork/borders/transient/titlebar_unselected.png"
+  357 0 0 2 2
+  371 3
+  354 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+  356 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+  355 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+  362 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+  364 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+  363 "artwork/borders/transient/titlebar_normal.png"
+  357 0 0 2 2
+  371 3
+1000
+12 999
+  100 TRANS_TITLEBAR_TEXT
+  351 "artwork/borders/transient/titlebar_unselected.png"
+  357 0 0 3 3
+  358 2 2 4 4
+1000
+12 999
+  100 FIXED_BDR_TITLEBAR
+  351 "artwork/borders/transient/titlebar_unselected.png"
+  357 0 0 2 2
+  371 3  
+  354 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3  
+  356 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3  
+  355 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3  
+  362 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3  
+  364 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3  
+  363 "artwork/borders/transient/fixed_titlebar.png"
+  357 0 0 2 2
+  371 3
+1000
+12 999
+  100 FIXED_TIP
+  351 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  353 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  352 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  354 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+  356 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+  355 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+  359 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  361 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  360 "artwork/borders/transient/tip_unselected.png"
+  357 3 3 3 3
+  362 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+  364 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+  363 "artwork/borders/transient/ftip_normal.png"
+  357 3 3 3 3
+1000
+12 999
+  100 PAGER_TITLE
+  351 "artwork/borders/pager/Pager_Title.png"
+  357 3 3 0 0
+  371 3
+1000
+12 999
+  100 PAGER_BUTTON
+  351 "artwork/borders/pager/Pager_TTop.png"
+  357 3 3 16 3
+  355 "artwork/borders/pager/Pager_TTop2.png"
+  357 3 3 16 3
+  363 "artwork/borders/pager/Pager_TTop2.png"
+  357 3 3 16 3
+  358 3 3 16 3
+1000
+12 999
+  100 PAGER_CAP
+  351 "artwork/borders/pager/Pager_TBottom.png"
+  357 3 3 3 3
+1000
+12 999
+  100 PAGER_BACK
+  351 "artwork/borders/pager/Pager_Left.png"
+  357 2 2 4 4
+1000
+12 999
+  100 PAGER_TOP
+  351 "artwork/borders/pager/Pager_Top.png"
+  357 2 3 2 2
+1000
+12 999
+  100 PAGER_BOTTOM
+  351 "artwork/borders/pager/Pager_Bottom.png"
+  357 2 3 2 2
+1000
+12 999
+  100 BUTTON_BLACK
+  351 "artwork/other/Black.png"
+1000
+12 999
+  100 BUTTON_BLANK
+  351 "artwork/other/Blank.png"
+1000
+12 999
+  100 BLANK
+  351 "artwork/other/tttrans.png"
+1000
+12 999
+  100 COORDS
+  351 "artwork/other/menu.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 DIALOG_WIDGET_BUTTON
+  351 "artwork/dialogs/button_normal.png"
+  357 5 5 5 5
+  352 "artwork/dialogs/button_clicked.png"
+  357 5 5 5 5
+  358 5 5 5 5
+1000
+12 999
+  100 DIALOG_WIDGET_CHECK_BUTTON
+  351 "artwork/dialogs/check_normal.png"
+  357 0 0 0 0
+  352 "artwork/dialogs/check_normal_press.png"
+  357 0 0 0 0
+  354 "artwork/dialogs/check_clicked.png"
+  357 0 0 0 0
+  355 "artwork/dialogs/check_clicked_press.png"
+  357 0 0 0 0
+  358 4 4 4 4
+1000
+12 999
+  100 DIALOG_WIDGET_RADIO_BUTTON
+  351 "artwork/dialogs/radio_normal.png"
+  357 0 0 0 0
+  352 "artwork/dialogs/radio_normal_press.png"
+  357 0 0 0 0
+  354 "artwork/dialogs/radio_clicked.png"
+  357 0 0 0 0
+  355 "artwork/dialogs/radio_clicked_press.png"
+  357 0 0 0 0
+  358 4 4 4 4
+1000
+12 999
+  100 DIALOG_WIDGET_SEPARATOR
+  351 "artwork/dialogs/separator.png"
+  357 1 1 1 1
+  352 "artwork/dialogs/separator.png"
+  357 1 1 1 1
+  358 1 1 1 1
+1000
+12 999
+  100 DIALOG_WIDGET_TABLE
+  351 "artwork/other/p_sel.png"
+  357 2 2 2 2
+  358 4 4 4 4
+1000
+12 999
+  100 DIALOG_WIDGET_SLIDER_BASE_HORIZONTAL
+  351 "artwork/dialogs/slide_horiz.png"
+  357 6 6 6 6
+  358 6 6 6 6
+1000
+12 999
+  100 DIALOG_WIDGET_SLIDER_KNOB_HORIZONTAL
+  351 "artwork/dialogs/thumb_horiz.png"
+  357 5 5 3 3
+  358 5 5 3 3
+1000
+12 999
+  100 DIALOG_WIDGET_SLIDER_BASE_VERTICAL
+  351 "artwork/dialogs/slide_vert.png"
+  357 6 6 6 6
+  358 6 6 6 6
+1000
+12 999
+  100 DIALOG_WIDGET_SLIDER_KNOB_VERTICAL
+  351 "artwork/dialogs/thumb_vert.png"
+  357 3 3 5 5
+  358 3 3 5 5
+1000
+12 999
+  100 DIALOG_WIDGET_AREA
+  351 "artwork/dialogs/sunken.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 SETTINGS_DESKTOP_AREA
+  351 "artwork/dialogs/bgarea.png"
+  371 3
+  358 4 4 4 4
+1000
+12 999
+  100 SETTINGS_AREA_AREA
+  351 "artwork/dialogs/bgarea.png"
+  371 3
+  358 4 4 4 4
+1000
+12 999
+  100 SETTINGS_AREADESK_AREA
+  351 "artwork/dialogs/raised.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 DIALOG
+  351 "artwork/dialogs/bgarea.png"
+  357 2 2 2 2
+  358 5 5 5 5 
+1000
+12 999
+  100 DIALOG_BUTTON
+  351 "artwork/other/Dialog_btn_1.png"
+  357 3 3 3 3
+  353 "artwork/other/Dialog_btn_1.png"
+  357 3 3 3 3
+  352 "artwork/other/Dialog_btn_3.png"
+  357 3 3 3 3
+  358 12 12 6 4
+1000
+12 999
+  100 DEFAULT_DOCK_BUTTON
+  351 "artwork/other/menu.png"
+  357 4 4 4 4
+  353 "artwork/other/menu.png"
+  357 4 4 4 4
+  352 "artwork/other/menu.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 DESKTOP_DRAGBUTTON_HORIZ
+  351 "artwork/dragbar/dragbar_normal.png"
+  357 126 126 2 2
+  352 "artwork/dragbar/dragbar_clicked.png"
+  357 126 126 2 2
+  353 "artwork/dragbar/dragbar_hilited.png"
+  357 126 126 2 2
+1000
+12 999
+  100 DESKTOP_RAISEBUTTON_HORIZ
+  351 "artwork/dragbar/dragbar_raise_normal.png"
+  353 "artwork/dragbar/dragbar_raise_hilited.png"
+  352 "artwork/dragbar/dragbar_raise_clicked.png"
+1000
+12 999
+  100 DESKTOP_LOWERBUTTON_HORIZ
+  351 "artwork/dragbar/dragbar_lower_normal.png"
+  353 "artwork/dragbar/dragbar_lower_hilited.png"
+  352 "artwork/dragbar/dragbar_lower_clicked.png"
+1000
+12 999
+  100 DESKTOP_DESKRAY_HORIZ
+  351 "artwork/dragbar/dragbar_deskray_normal.png"
+  352 "artwork/dragbar/dragbar_deskray_clicked.png"
+  353 "artwork/dragbar/dragbar_deskray_hilited.png"
+1000
+12 999
+  100 DESKTOP_DRAGBUTTON_VERT
+  351 "artwork/dragbar/dragbar_vert_normal.png"
+  357 2 2 126 126
+  352 "artwork/dragbar/dragbar_vert_clicked.png"
+  357 2 2 126 126
+  353 "artwork/dragbar/dragbar_vert_normal.png"
+  357 2 2 126 126
+1000
+12 999
+  100 DESKTOP_RAISEBUTTON_VERT
+  351 "artwork/dragbar/dragbar_raise_normal.png"
+  353 "artwork/dragbar/dragbar_raise_hilited.png"
+  352 "artwork/dragbar/dragbar_raise_clicked.png"
+1000
+12 999
+  100 DESKTOP_LOWERBUTTON_VERT
+  351 "artwork/dragbar/dragbar_lower_normal.png"
+  353 "artwork/dragbar/dragbar_lower_hilited.png"
+  352 "artwork/dragbar/dragbar_lower_clicked.png"
+1000
+12 999
+  100 DESKTOP_DESKRAY_VERT
+  351 "artwork/dragbar/dragbar_deskray_vert_normal.png"
+  352 "artwork/dragbar/dragbar_deskray_vert_clicked.png"
+  353 "artwork/dragbar/dragbar_deskray_vert_hilited.png"
+1000
+12 999
+  100 DESKTOP_NEXTBUTTON
+  351 "artwork/dragbar/dtopnext.png"
+1000
+12 999
+  100 DESKTOP_PREVBUTTON
+  351 "artwork/dragbar/dtopprev.png"
+1000
+12 999
+  100 EPPLET_BACKGROUND_HORIZONTAL
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_BACKGROUND_VERTICAL
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_BUTTON
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/check_normal_press.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_TOGGLEBUTTON_OFF
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/check_normal_press.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_TOGGLEBUTTON_ON
+  351 "artwork/dialogs/check_normal_press.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_DRAWINGAREA
+  351 "artwork/dialogs/sunken.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_HSLIDER_BASE
+  351 "artwork/dialogs/sunken.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_VSLIDER_BASE
+  351 "artwork/dialogs/sunken.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_HSLIDER_KNOB
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_VSLIDER_KNOB
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_POPUP_BASE
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_POPUP_ENTRY
+  351 "artwork/dialogs/raised.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/check_normal_press.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_HBAR_BAR
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_HBAR_BASE
+  351 "artwork/dialogs/sunken.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_VBAR_BAR
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_VBAR_BASE
+  351 "artwork/dialogs/sunken.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_ARROW_LEFT
+  351 "artwork/dialogs/arrow_left_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_left_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 EPPLET_ARROW_RIGHT
+  351 "artwork/dialogs/arrow_right_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_right_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 EPPLET_ARROW_UP
+  351 "artwork/dialogs/arrow_up_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_up_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 EPPLET_ARROW_DOWN
+  351 "artwork/dialogs/arrow_down_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_down_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 EPPLET_CLOSE
+  351 "artwork/dialogs/close_n.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/close_p.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_HELP
+  351 "artwork/dialogs/help_n.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/help_p.png"
+  357 2 2 2 2
+1000
+12 999
+  100 EPPLET_CONFIGURE
+  351 "artwork/dialogs/config_n.png"
+  357 2 2 2 2
+  352 "artwork/dialogs/config_p.png"
+  357 2 2 2 2
+1000
+12 999
+  100 WARPFOCUS
+  351 "artwork/other/Dialog_btn_1.png"
+  357 6 6 6 6
+  352 "artwork/other/Dialog_btn_3.png"
+  357 6 6 6 6
+  358 6 6 6 6
+1000
+12 999
+  100 DEFAULT_ICON_BUTTON
+  351 "artwork/other/menu.png"
+  357 2 2 2 2
+  353 "artwork/other/menu.png"
+  357 2 2 2 2
+  352 "artwork/other/menu.png"
+  357 2 2 2 2
+1000
+12 999
+  100 ICONBOX_SCROLLBAR_BASE_HORIZONTAL
+  351 "artwork/dialogs/trough.png"
+  357 1 1 1 1
+  358 0 0 0 0
+1000
+12 999
+  100 ICONBOX_SCROLLBAR_KNOB_HORIZONTAL
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+  358 2 2 2 2
+1000
+12 999
+  100 ICONBOX_SCROLLBAR_BASE_VERTICAL
+  351 "artwork/dialogs/trough.png"
+  357 1 1 1 1
+  358 0 0 0 0
+1000
+12 999
+  100 ICONBOX_SCROLLBAR_KNOB_VERTICAL
+  351 "artwork/dialogs/scrollbar.png"
+  357 2 2 2 2
+  358 2 2 2 2
+1000
+12 999
+  100 ICONBOX_HORIZONTAL
+  351 "artwork/dialogs/raised_normal.png"
+  357 3 3 3 3
+  358 6 6 6 6
+1000
+12 999
+  100 ICONBOX_VERTICAL
+  351 "artwork/dialogs/raised_normal.png"
+  357 3 3 3 3
+  358 6 6 6 6
+1000
+12 999
+  100 ICONBOX_ARROW_LEFT
+  351 "artwork/dialogs/arrow_left_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_left_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 ICONBOX_ARROW_RIGHT
+  351 "artwork/dialogs/arrow_right_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_right_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 ICONBOX_ARROW_UP
+  351 "artwork/dialogs/arrow_up_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_up_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 ICONBOX_ARROW_DOWN
+  351 "artwork/dialogs/arrow_down_n.png"
+  357 4 4 4 4
+  352 "artwork/dialogs/arrow_down_p.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 ICONBOX_SCROLLKNOB_HORIZONTAL
+  351 "artwork/dialogs/scrollbar_h_thumb.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 ICONBOX_SCROLLKNOB_VERTICAL
+  351 "artwork/dialogs/scrollbar_v_thumb.png"
+  357 4 4 4 4
+  358 4 4 4 4
+1000
+12 999
+  100 MENU_SUB
+  351 "artwork/menus/submenu1.png"
+  357 3 18 15 0
+  352 "artwork/menus/submenu2.png"
+  357 3 18 15 0
+  353 "artwork/menus/submenu3_normal.png"
+  357 3 18 15 0
+  358 5 18 4 2
+1000
+12 999
+  100 MENU_BG
+  351 "artwork/other/menu.png"
+  357 3 3 3 3
+  358 0 0 2 3
+1000
+12 999
+  100 MENU_SEL
+  351 "artwork/menus/selected_normal.png"
+  357 2 3 0 0
+  358 5 2 4 2
+1000
+12 999
+  100 PAGER_SEL
+  351 "artwork/other/p_sel.png"
+  357 2 2 2 2
+  358 2 2 2 2
+1000
+12 999
+  100 PAGER_BACKGROUND
+  351 "artwork/dialogs/raised_normal.png"
+  357 3 3 3 3
+1000
+12 999
+  100 PAGER_WIN
+  351 "artwork/dialogs/sunken_normal.png"
+  357 3 3 3 3
+1000
+12 999
+  100 TT_MAIN
+  351 "artwork/other/menu.png"
+  357 5 5 5 5
+  358 3 4 3 4
+1000
+12 999
+  100 TT_BLANK
+  351 "artwork/other/tttrans.png"
+1000
+12 999
+  100 TT_MINI
+  351 "artwork/dialogs/raised_textured.png"
+  357 3 3 3 3
+  358 3 3 3 3
+1000

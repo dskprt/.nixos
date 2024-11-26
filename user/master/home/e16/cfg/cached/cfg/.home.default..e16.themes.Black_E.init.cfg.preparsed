@@ -1,0 +1,37 @@
+1001 1
+5 999;  100 STARTUP_BACKGROUND
+  560 "30 30 90"
+  561 "artwork/backgrounds/dark_rock.jpg" 1 1 0 0 0 0
+  562 "artwork/backgrounds/elogo.png" 1 512 1024 0 0
+1000
+12 999
+  100 STARTUP_BAR
+  351 "artwork/dialogs/dialog_button_normal.png"
+  357 4 4 4 4
+1000
+12 999
+  100 PROGRESS_BAR
+  351 "artwork/bar_normal.png"
+  357 2 2 2 2
+  352 "artwork/bar_normal.png"
+  357 2 2 2 2
+  354 "artwork/bar_hilited_active.png"
+  357 6 22 1 1
+  358 6 22 1 1
+1000
+1 999
+  100 PROGRESS_TEXT
+  201 0  
+  351 "*font-init"
+  204 1
+  205 255 255 255
+  206 0 0 0
+1000
+1 999
+  100 PROGRESS_TEXT_NUMBER
+  201 512
+  351 "*font-init"
+  204 1
+  205 255 255 255
+  206 0 0 0
+1000

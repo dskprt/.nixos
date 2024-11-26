@@ -30,11 +30,14 @@
 		# Nix User Repository
 		nur.url = "github:nix-community/NUR";
 
+		# nix-alien
+		nix-alien.url = "github:thiagokokada/nix-alien";
+
 		# cerberus-specific stuff
 		#linux-rockchip = { url = "github:armbian/linux-rockchip/rk-6.1-rkr1"; flake = false; };
-		rkbin = { url = "github:armbian/rkbin"; flake = false; };
-		uboot = { url = "github:u-boot/u-boot/v2024.07-rc2"; flake = false; };
-		armbian-firmware = { url = "github:armbian/firmware"; flake = false; };
+		#kbin = { url = "github:armbian/rkbin"; flake = false; };
+		#uboot = { url = "github:u-boot/u-boot/v2024.07-rc2"; flake = false; };
+		#armbian-firmware = { url = "github:armbian/firmware"; flake = false; };
 		#mesa-updated = { url = "github:K900/nixpkgs/mesa-24.1"; };
 	};
 
@@ -46,10 +49,11 @@
 		impermanence,
 		#wired,
 		#linux-rockchip,
-		rkbin,
-		uboot,
-		armbian-firmware,
+		#rkbin,
+		#uboot,
+		#armbian-firmware,
 		nix-index-database,
+		nix-alien,
 		...
 	}@inputs: let
 		x86_64_pkgs_native = import nixpkgs {
@@ -79,65 +83,90 @@
 		# };
 	in {
 		nixosConfigurations = {
-			"moon" = nixpkgs.lib.nixosSystem {
+			"lappy" = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
+					({ inputs, pkgs, ... }: {
+						# nixpkgs.overlays = [ inputs.nix-alien.overlays.default ];
+						# environment.systemPackages = with pkgs; [ nix-alien ];
+						# programs.nix-ld.enable = true;
+
+						environment.systemPackages = with inputs.nix-alien.packages."x86_64-linux"; [
+							nix-alien
+						];
+
+						programs.nix-ld.enable = true;
+					})
+				
 					nur.nixosModules.nur
-					./system/moon
+					./system/laptop-workbench
 					nix-index-database.nixosModules.nix-index
 
 					{
 						boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-						networking.hostName = "moon";
+						networking.hostName = "lappy";
 					}
 				];
 			};
-			"cerberus" = nixpkgs.lib.nixosSystem {
+			"server-cloud-large" = nixpkgs.lib.nixosSystem {
 				system = "aarch64-linux";
-				specialArgs = { inherit inputs aarch64_pkgs_cross x86_64_pkgs_cross; };
+				specialArgs = { inherit inputs; };
 				modules = [
-					./system/sdimage.nix
-					./system/cerberus
-					#./system/cerberus/filesystem
-					./system/cerberus/boot/kernel/build.nix
+					nur.nixosModules.nur
+					./system/server-large
 
 					{
-						#nixpkgs.crossSystem.system = "aarch64-linux";
-						#nixpkgs.localSystem.system = "x86_64-linux";
-
-						nixpkgs.overlays = [
-							(final: super: {
-								makeModulesClosure = x:
-								super.makeModulesClosure (x // { allowMissing = true; });
-							})
-						];
-
-						networking.hostName = "cerberus";
+						networking.hostName = "gangut";
 					}
 				];
 			};
-			"sariel-aarch64" = nixpkgs.lib.nixosSystem {
-				system = "aarch64-linux";
-				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
-				modules = [
-					./system/sdimage.nix
-					./system/sariel-aarch64
-
-					{
-						# necessary for firmware
-						nixpkgs.config.allowUnfree = true;
-
-						nixpkgs.overlays = [
-							(final: super: {
-								makeModulesClosure = x:
-								super.makeModulesClosure (x // { allowMissing = true; });
-							})
-						];
-
-						networking.hostName = "sariel";
-					}
-				];
-			};
+# 			"cerberus" = nixpkgs.lib.nixosSystem {
+# 				system = "aarch64-linux";
+# 				specialArgs = { inherit inputs aarch64_pkgs_cross x86_64_pkgs_cross; };
+# 				modules = [
+# 					./system/sdimage.nix
+# 					./system/cerberus
+# 					#./system/cerberus/filesystem
+# 					./system/cerberus/boot/kernel/build.nix
+# 
+# 					{
+# 						#nixpkgs.crossSystem.system = "aarch64-linux";
+# 						#nixpkgs.localSystem.system = "x86_64-linux";
+# 
+# 						nixpkgs.overlays = [
+# 							(final: super: {
+# 								makeModulesClosure = x:
+# 								super.makeModulesClosure (x // { allowMissing = true; });
+# 							})
+# 						];
+# 
+# 						networking.hostName = "cerberus";
+# 					}
+# 				];
+# 			};
+# 			"sariel-aarch64" = nixpkgs.lib.nixosSystem {
+# 				system = "aarch64-linux";
+# 				specialArgs = { inherit inputs; inherit aarch64_pkgs_cross; };
+# 				modules = [
+# 					./system/sdimage.nix
+# 					./system/sariel-aarch64
+# 
+# 					{
+# 						# necessary for firmware
+# 						nixpkgs.config.allowUnfree = true;
+# 
+# 						nixpkgs.overlays = [
+# 							(final: super: {
+# 								makeModulesClosure = x:
+# 								super.makeModulesClosure (x // { allowMissing = true; });
+# 							})
+# 						];
+# 
+# 						networking.hostName = "sariel";
+# 					}
+# 				];
+# 			};
 			# "sariel-x86_64" = nixpkgs.lib.nixosSystem {
 			# 	specialArgs = { inherit inputs; };
 			# 	modules = [
@@ -151,7 +180,7 @@
 		};
 
 		homeConfigurations = {
-			"scarlet@moon" = home-manager.lib.homeManagerConfiguration {
+			"master@lappy" = home-manager.lib.homeManagerConfiguration {
 				pkgs = import nixpkgs {
 					system = "x86_64-linux";
 					# overlays =
@@ -166,15 +195,15 @@
 				modules = [
 					#wired.homeManagerModules.default
 					#stylix.homeManagerModules.stylix
-					./user/scarlet/home
+					./user/master/home
 				];
 			};
 
-			"crimson@moon" = home-manager.lib.homeManagerConfiguration {
-				pkgs = nixpkgs.legacyPackages.x86_64-linux;
-				extraSpecialArgs = { inherit inputs; };
-				modules = [ ./user/crimson/home ];
-			};
+			#"crimson@moon" = home-manager.lib.homeManagerConfiguration {
+			#	pkgs = nixpkgs.legacyPackages.x86_64-linux;
+			#	extraSpecialArgs = { inherit inputs; };
+			#	modules = [ ./user/crimson/home ];
+			#};
 
 			# "white" = home-manager.lib.homeManagerConfiguration {
 			# 	pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -182,17 +211,17 @@
 			# 	modules = [ ./user/white/home ];
 			# };
 
-			"hades@cerberus" = home-manager.lib.homeManagerConfiguration {
-				pkgs = import nixpkgs {
-					system = "aarch64-linux";
-				};
-
-				extraSpecialArgs = { inherit inputs; };
-
-				modules = [
-					./user/hades/home
-				];
-			};
+			#"hades@cerberus" = home-manager.lib.homeManagerConfiguration {
+			#	pkgs = import nixpkgs {
+			#		system = "aarch64-linux";
+			#	};
+#
+#				extraSpecialArgs = { inherit inputs; };
+#
+#				modules = [
+#					./user/hades/home
+#				];
+#			};
 		};
 
 		devShells.x86_64-linux.kernelEnv = (x86_64_pkgs_native.buildFHSUserEnv.override { stdenv = x86_64_pkgs_native.llvmPackages_18.stdenv; } {
