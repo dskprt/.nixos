@@ -5,7 +5,7 @@
 		isNormalUser = true;
 		home = "/home/admin";
 		shell = pkgs.fish;
-		password = "shikikan";
+		hashedPasswordFile = "/@/admin.pass";
 		extraGroups = [ "wheel" "audio" "video" "dialout" "render" "docker" ];
 		subUidRanges = [
 			{ startUid = 100000; count = 65536; }
