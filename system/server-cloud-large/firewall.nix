@@ -5,8 +5,10 @@
 		checkReversePath = true;
 
 		allowedTCPPorts = [
-			80
-			22
+			22 # ssh
+			80 # http
+			443 # https
+			3269 # wisp
 		];
 	};
 }

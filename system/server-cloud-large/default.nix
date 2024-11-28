@@ -13,7 +13,12 @@
 
 		./firewall.nix
 		./podman.nix
-
+		./httpd.nix
+		#./caddy.nix
+		./wireguard.nix
+		./services.nix
+		./acme.nix
+		
 		# hardware configuration
 		./hardware.nix
 	];

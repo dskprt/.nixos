@@ -3,3 +3,8 @@ user/scarlet/home/e16/cfg/backgrounds/*
 user/scarlet/home/e16/cfg/themes/*
 result
 firmware-dump/
+
+*.env
+*.key
+**/*.env
+**/*.key

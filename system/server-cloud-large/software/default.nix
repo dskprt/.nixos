@@ -46,6 +46,9 @@
 		xfsprogs
 
 		podman-compose
+		wireguard-tools
+		qemu-user
+		python312Full
 	];
 
 	environment.variables = {
